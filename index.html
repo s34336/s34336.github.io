@@ -1,55 +1,240 @@
-
-<!-- นี่คือโครงสร้างหน้าเว็บทั้งหมด  -->
 <!DOCTYPE html>
 <html lang="th">
-<head>
-<meta charset="UTF-8">
-<title>หน้าแนะนําตัวของฉัน</title>
-<style>
 
-  .btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 5px; }
-body {
-    font-family: sans-serif;
-    background: linear-gradient(135deg, #ffeaf4, #eee7ff, #e5f3ff);
-    color: #6d5875;
-    text-align: center;
-    padding: 50px 20px;
-    min-height: 100vh;
-}
-.card {
-    background: rgba(255,255,255,0.9);
-    border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    max-width: 550px;
-    margin: 20px auto;
-    padding: 35px;
-}
-h1 {
-    color: #6d5875;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-p { font-size: 18px; line-height: 1.6; }
-.profile-img {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 6px solid white;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    margin-bottom: 20px;
-}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at top left, #fff1f8, transparent 35%),
+                radial-gradient(circle at bottom right, #e8e0ff, transparent 35%),
+                linear-gradient(135deg, #ffeaf4, #eee7ff, #e5f3ff);
+
+            font-family: Arial, sans-serif;
+            color: #6d5875;
+
+            text-align: center;
+
+            padding: 50px 20px;
+        }
+
+
+        /* การ์ดหลัก */
+
+        .card {
+            background: rgba(255, 255, 255, 0.88);
+
+            max-width: 550px;
+
+            margin: 0 auto;
+
+            padding: 40px 30px;
+
+            border-radius: 35px;
+
+            box-shadow:
+                0 15px 40px rgba(120, 100, 150, 0.15);
+
+            backdrop-filter: blur(10px);
+
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+
+
+        /* หัวข้อ */
+
+        h1 {
+            color: #765b7d;
+
+            font-size: 32px;
+
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            line-height: 1.4;
+        }
+
+
+        /* รูปโปรไฟล์ */
+
+        .profile-img {
+            width: 200px;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            border: 6px solid white;
+
+            box-shadow:
+                0 8px 25px rgba(120, 100, 150, 0.18);
+
+            margin-bottom: 20px;
+
+            transition: transform 0.3s ease;
+        }
+
+
+        .profile-img:hover {
+            transform: scale(1.03);
+        }
+
+
+        /* ข้อความ */
+
+        p {
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin: 10px 0;
+        }
+
+
+        strong {
+            color: #a06caf;
+        }
+
+
+        /* ปุ่ม */
+
+        .btn {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 13px 28px;
+
+            background: linear-gradient(
+                135deg,
+                #c99bd6,
+                #a99be8
+            );
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 8px 20px rgba(150, 120, 180, 0.25);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 25px rgba(150, 120, 180, 0.35);
+        }
+
+
+        /* สำหรับมือถือ */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 30px 15px;
+            }
+
+            .card {
+                padding: 30px 20px;
+                border-radius: 30px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .profile-img {
+                width: 170px;
+                height: 215px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<div class="card">
-<img src="IMG_1798.jpeg" alt="รูปโปรไฟล์" class="profile-img">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีค่ะ ดิฉันชื่อ <strong>สุภาพิชญ์ ชินวุฒิ (Supapit Chinnawut)</strong></p>
-<p>ขณะนี้กําลังศึกษา/สนใจด้าน Biology & Mathematics</p>
-<p>นี่คือเว็บไซต์แรกของดิฉันที่โฮสต์บน GitHub Pages!</p>
-  </div>
-  <a href="portfolio.html" class="btn"> หน้าถัดไป</a>
+
+
+    <!-- การ์ดโปรไฟล์ -->
+
+    <div class="card">
+
+
+        <!-- หัวข้ออยู่ด้านบนสุด -->
+
+        <h1>
+            ยินดีต้อนรับสู่โปรไฟล์ของฉัน 🌷
+        </h1>
+
+
+        <!-- รูปโปรไฟล์ -->
+
+        <img
+            src="IMG_1798.jpeg"
+            alt="รูปโปรไฟล์"
+            class="profile-img"
+        >
+
+
+        <!-- ข้อมูล -->
+
+        <p>
+            สวัสดีค่ะ ดิฉันชื่อ
+            <strong>สุภาพิชญ์ ชินวุฒิ</strong>
+        </p>
+
+
+        <p>
+            ขณะนี้กำลังศึกษา/สนใจด้าน
+            <strong>Biology & Mathematics</strong>
+        </p>
+
+
+        <p>
+            นี่คือเว็บไซต์แรกของดิฉัน
+            ที่โฮสต์บน GitHub Pages! ✨
+        </p>
+
+
+    </div>
+
+
+    <!-- ปุ่มอยู่นอกการ์ด -->
+
+    <a href="portfolio.html" class="btn">
+        หน้าถัดไป → 
+    </a>
+
+
 </body>
+
 </html>
