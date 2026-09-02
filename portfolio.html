@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>My Portfolio 🌷</title>
 
     <style>
 
@@ -13,77 +13,231 @@
             box-sizing: border-box;
         }
 
+
         body {
             margin: 0;
             min-height: 100vh;
-
-            background:
-                radial-gradient(circle at top left, #fff1f8, transparent 35%),
-                radial-gradient(circle at bottom right, #e8e0ff, transparent 35%),
-                linear-gradient(135deg, #ffeaf4, #eee7ff, #e5f3ff);
 
             font-family: Arial, sans-serif;
 
             color: #6d5875;
 
-            padding: 40px 20px;
+            overflow-x: hidden;
+
+            background:
+                radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 25%),
+                radial-gradient(circle at 90% 20%, #f8dfff 0%, transparent 30%),
+                radial-gradient(circle at 20% 90%, #dff5ff 0%, transparent 30%),
+                linear-gradient(
+                    135deg,
+                    #ffeaf4,
+                    #eee7ff,
+                    #e5f3ff
+                );
+
+            padding: 45px 20px;
         }
 
 
-        /* หัวข้อใหญ่ */
+        /* ของตกแต่ง */
 
-        .title {
+        .decoration {
+            position: fixed;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+            font-size: 28px;
+
+            animation: float 4s ease-in-out infinite;
+        }
+
+
+        .flower1 {
+            top: 8%;
+            left: 6%;
+        }
+
+
+        .flower2 {
+            top: 20%;
+            right: 7%;
+
+            animation-delay: 1s;
+        }
+
+
+        .heart1 {
+            bottom: 15%;
+            left: 7%;
+
+            animation-delay: 2s;
+        }
+
+
+        .heart2 {
+            bottom: 8%;
+            right: 9%;
+
+            animation-delay: 1.5s;
+        }
+
+
+        .star1 {
+            top: 45%;
+            left: 4%;
+
+            font-size: 20px;
+
+            animation-delay: .5s;
+        }
+
+
+        .star2 {
+            top: 55%;
+            right: 4%;
+
+            font-size: 20px;
+
+            animation-delay: 2.5s;
+        }
+
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+        }
+
+
+        /* ส่วนหัว */
+
+        .header {
+            position: relative;
+
+            z-index: 1;
+
             text-align: center;
+
+            margin-bottom: 35px;
+
+            animation: appear 1s ease;
+        }
+
+
+        .header h1 {
+            margin: 0;
 
             color: #765b7d;
 
-            font-size: 36px;
+            font-size: 38px;
 
-            margin-bottom: 35px;
+            line-height: 1.4;
         }
 
 
-        /* กล่องแต่ละหัวข้อ */
+        .header p {
+            margin-top: 10px;
+
+            color: #9a829f;
+
+            font-size: 16px;
+        }
+
+
+        .line {
+            width: 100px;
+
+            height: 3px;
+
+            margin: 18px auto;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #f2b7d5,
+                    #c8b6f2,
+                    #b8dff2
+                );
+        }
+
+
+        /* การ์ด */
 
         .section {
+            position: relative;
+
+            z-index: 1;
+
             max-width: 750px;
 
             margin: 0 auto 25px;
 
-            background: rgba(255, 255, 255, 0.88);
+            padding: 30px;
 
-            padding: 28px;
+            background: rgba(255, 255, 255, 0.82);
 
-            border-radius: 30px;
+            border-radius: 35px;
+
+            border: 2px solid rgba(255, 255, 255, 0.85);
 
             box-shadow:
-                0 10px 30px rgba(120, 100, 150, 0.13);
+                0 15px 40px rgba(120, 100, 150, 0.14);
 
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(14px);
 
-            backdrop-filter: blur(10px);
+            animation: appear 1s ease;
 
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease;
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease;
         }
 
 
         .section:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
 
             box-shadow:
-                0 15px 35px rgba(120, 100, 150, 0.18);
+                0 20px 45px rgba(120, 100, 150, 0.20);
         }
 
 
-        /* หัวข้อของแต่ละกล่อง */
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* หัวข้อแต่ละส่วน */
 
         h2 {
-            color: #a06caf;
-
             margin-top: 0;
 
-            font-size: 24px;
+            color: #a06caf;
+
+            font-size: 25px;
         }
 
 
@@ -98,12 +252,19 @@
         }
 
 
+        strong {
+            color: #a06caf;
+        }
+
+
         /* รายการ */
 
         ul {
+            padding-left: 25px;
+
             line-height: 2;
 
-            padding-left: 25px;
+            margin-bottom: 0;
         }
 
 
@@ -112,29 +273,42 @@
         }
 
 
-        /* ตัวหนังสือสำคัญ */
+        /* กล่องย่อย */
 
-        strong {
-            color: #a06caf;
+        .mini-box {
+            margin-top: 15px;
+
+            padding: 15px 18px;
+
+            background: rgba(255, 240, 248, 0.7);
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(220, 190, 220, 0.5);
         }
 
 
-        /* ปุ่มกลับหน้าแรก */
+        /* ปุ่ม */
 
         .btn {
+            position: relative;
+
+            z-index: 2;
+
             display: block;
 
             width: fit-content;
 
             margin: 35px auto 10px;
 
-            padding: 13px 28px;
+            padding: 14px 32px;
 
-            background: linear-gradient(
-                135deg,
-                #c99bd6,
-                #a99be8
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #c99bd6,
+                    #a99be8
+                );
 
             color: white;
 
@@ -142,22 +316,22 @@
 
             border-radius: 30px;
 
-            font-size: 16px;
+            font-size: 17px;
 
             font-weight: bold;
 
             box-shadow:
-                0 8px 20px rgba(150, 120, 180, 0.25);
+                0 10px 25px rgba(150, 120, 180, 0.28);
 
-            transition: all 0.3s ease;
+            transition: all .3s ease;
         }
 
 
         .btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px) scale(1.03);
 
             box-shadow:
-                0 12px 25px rgba(150, 120, 180, 0.35);
+                0 15px 30px rgba(150, 120, 180, 0.38);
         }
 
 
@@ -169,24 +343,34 @@
                 padding: 30px 15px;
             }
 
-            .title {
-                font-size: 28px;
+
+            .header h1 {
+                font-size: 29px;
             }
+
 
             .section {
-                padding: 22px;
+                padding: 23px;
 
-                border-radius: 25px;
+                border-radius: 30px;
             }
+
 
             h2 {
-                font-size: 21px;
+                font-size: 22px;
             }
+
 
             p,
             li {
                 font-size: 16px;
             }
+
+
+            .decoration {
+                font-size: 22px;
+            }
+
         }
 
     </style>
@@ -197,11 +381,38 @@
 <body>
 
 
-    <!-- หัวข้อ -->
+    <!-- ของตกแต่ง -->
 
-    <h1 class="title">
-        My Portfolio 🌷✨
-    </h1>
+    <div class="decoration flower1">🌷</div>
+
+    <div class="decoration flower2">🌸</div>
+
+    <div class="decoration heart1">♡</div>
+
+    <div class="decoration heart2">💗</div>
+
+    <div class="decoration star1">✦</div>
+
+    <div class="decoration star2">✧</div>
+
+
+
+    <!-- ส่วนหัว -->
+
+    <div class="header">
+
+        <h1>
+            My Portfolio 🌷✨
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            Welcome to my portfolio ♡
+        </p>
+
+    </div>
+
 
 
     <!-- About Me -->
@@ -220,7 +431,13 @@
             <strong>Biology & Mathematics</strong>
         </p>
 
+        <div class="mini-box">
+            ✨ สนใจเรียนรู้สิ่งใหม่ ๆ
+            และพัฒนาตัวเองอยู่เสมอ
+        </div>
+
     </div>
+
 
 
     <!-- Education -->
@@ -230,14 +447,17 @@
         <h2>🎓 Education</h2>
 
         <p>
-            กำลังศึกษาอยู่ในระดับมัธยมศึกษาตอนปลาย
+            กำลังศึกษาอยู่ในระดับ
+            <strong>มัธยมศึกษาตอนปลาย</strong>
         </p>
 
         <p>
             มีความสนใจในการศึกษาต่อระดับมหาวิทยาลัย
+            และต้องการพัฒนาความรู้ของตัวเองต่อไป
         </p>
 
     </div>
+
 
 
     <!-- Activities -->
@@ -248,15 +468,26 @@
 
         <ul>
 
-            <li>เข้าร่วมกิจกรรมของโรงเรียน</li>
+            <li>
+                เข้าร่วมกิจกรรมของโรงเรียน
+            </li>
 
-            <li>ทำกิจกรรมร่วมกับเพื่อน ๆ</li>
+            <li>
+                ทำกิจกรรมร่วมกับเพื่อน ๆ
+            </li>
 
-            <li>เรียนรู้และพัฒนาทักษะใหม่ ๆ</li>
+            <li>
+                ฝึกการทำงานร่วมกับผู้อื่น
+            </li>
+
+            <li>
+                เรียนรู้และพัฒนาทักษะใหม่ ๆ
+            </li>
 
         </ul>
 
     </div>
+
 
 
     <!-- Certificates -->
@@ -268,9 +499,16 @@
         <p>
             รวบรวมเกียรติบัตรและผลงานต่าง ๆ
             ที่ได้รับจากการเข้าร่วมกิจกรรม
+            และการเรียนรู้
         </p>
 
+        <div class="mini-box">
+            🏆 สามารถเพิ่มรูปเกียรติบัตร
+            ของตัวเองในส่วนนี้ได้ภายหลัง
+        </div>
+
     </div>
+
 
 
     <!-- My Works -->
@@ -284,7 +522,12 @@
             รวมถึงเว็บไซต์ Portfolio นี้
         </p>
 
+        <div class="mini-box">
+            💻 My first GitHub Pages Portfolio
+        </div>
+
     </div>
+
 
 
     <!-- My Goal -->
@@ -299,13 +542,18 @@
             และอนาคตของตัวเอง
         </p>
 
+        <div class="mini-box">
+            🌟 Keep learning, keep growing ♡
+        </div>
+
     </div>
 
 
-    <!-- ปุ่มกลับ -->
+
+    <!-- ปุ่มกลับหน้าแรก -->
 
     <a href="index.html" class="btn">
-        ← กลับหน้าแรก
+        ← กลับหน้าแรก 🏠
     </a>
 
 
