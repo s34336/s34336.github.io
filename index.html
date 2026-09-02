@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>My Portfolio 🌷</title>
 
     <style>
 
@@ -17,85 +17,242 @@
             margin: 0;
             min-height: 100vh;
 
-            background:
-                radial-gradient(circle at top left, #fff1f8, transparent 35%),
-                radial-gradient(circle at bottom right, #e8e0ff, transparent 35%),
-                linear-gradient(135deg, #ffeaf4, #eee7ff, #e5f3ff);
-
             font-family: Arial, sans-serif;
+
             color: #6d5875;
 
             text-align: center;
 
-            padding: 50px 20px;
+            overflow-x: hidden;
+
+            background:
+                radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 25%),
+                radial-gradient(circle at 90% 20%, #f8dfff 0%, transparent 30%),
+                radial-gradient(circle at 20% 90%, #dff5ff 0%, transparent 30%),
+                linear-gradient(
+                    135deg,
+                    #ffeaf4,
+                    #eee7ff,
+                    #e5f3ff
+                );
+
+            padding: 45px 20px;
+        }
+
+
+        /* ของตกแต่งพื้นหลัง */
+
+        .decoration {
+            position: fixed;
+
+            font-size: 28px;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+            animation: float 4s ease-in-out infinite;
+        }
+
+
+        .flower1 {
+            top: 8%;
+            left: 7%;
+        }
+
+        .flower2 {
+            top: 18%;
+            right: 8%;
+
+            animation-delay: 1s;
+        }
+
+        .heart1 {
+            bottom: 15%;
+            left: 8%;
+
+            animation-delay: 2s;
+        }
+
+        .heart2 {
+            bottom: 8%;
+            right: 10%;
+
+            animation-delay: 1.5s;
+        }
+
+        .star1 {
+            top: 45%;
+            left: 4%;
+
+            font-size: 20px;
+
+            animation-delay: .5s;
+        }
+
+        .star2 {
+            top: 55%;
+            right: 5%;
+
+            font-size: 20px;
+
+            animation-delay: 2.5s;
+        }
+
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
         }
 
 
         /* การ์ดหลัก */
 
         .card {
-            background: rgba(255, 255, 255, 0.88);
 
-            max-width: 550px;
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 570px;
 
             margin: 0 auto;
 
-            padding: 40px 30px;
+            padding: 42px 30px;
 
-            border-radius: 35px;
+            background: rgba(255, 255, 255, 0.82);
+
+            border-radius: 40px;
+
+            border: 2px solid rgba(255, 255, 255, 0.85);
 
             box-shadow:
-                0 15px 40px rgba(120, 100, 150, 0.15);
+                0 20px 50px rgba(120, 100, 150, 0.18);
 
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(14px);
 
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            animation: appear 1s ease;
         }
 
 
-        /* หัวข้อ */
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* ข้อความต้อนรับ */
 
         h1 {
+
+            margin: 0 0 25px;
+
             color: #765b7d;
 
             font-size: 32px;
 
-            margin-top: 0;
-            margin-bottom: 25px;
-
             line-height: 1.4;
+
+            animation: fadeText 1.2s ease;
+        }
+
+
+        @keyframes fadeText {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
         }
 
 
         /* รูปโปรไฟล์ */
 
+        .profile-frame {
+
+            display: inline-block;
+
+            padding: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8cce5,
+                    #d9c8ff,
+                    #c9eaff
+                );
+
+            border-radius: 32px;
+
+            box-shadow:
+                0 12px 30px rgba(140, 110, 170, 0.22);
+
+            margin-bottom: 22px;
+
+            animation: photoAppear 1.3s ease;
+        }
+
+
+        @keyframes photoAppear {
+
+            from {
+                opacity: 0;
+                transform: scale(.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
         .profile-img {
-            width: 200px;
-            height: 250px;
+
+            display: block;
+
+            width: 210px;
+
+            height: 260px;
 
             object-fit: cover;
 
             border-radius: 25px;
 
-            border: 6px solid white;
+            border: 5px solid white;
 
-            box-shadow:
-                0 8px 25px rgba(120, 100, 150, 0.18);
-
-            margin-bottom: 20px;
-
-            transition: transform 0.3s ease;
-        }
-
-
-        .profile-img:hover {
-            transform: scale(1.03);
         }
 
 
         /* ข้อความ */
 
         p {
+
             font-size: 17px;
 
             line-height: 1.8;
@@ -105,24 +262,67 @@
 
 
         strong {
+
             color: #a06caf;
+        }
+
+
+        /* ข้อความเล็ก */
+
+        .welcome-text {
+
+            margin-top: 18px;
+
+            color: #9a829f;
+
+            font-size: 15px;
+
+            font-style: italic;
+        }
+
+
+        /* เส้นตกแต่ง */
+
+        .line {
+
+            width: 100px;
+
+            height: 3px;
+
+            margin: 20px auto;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #f2b7d5,
+                    #c8b6f2,
+                    #b8dff2
+                );
         }
 
 
         /* ปุ่ม */
 
         .btn {
+
+            position: relative;
+
+            z-index: 2;
+
             display: inline-block;
 
-            margin-top: 18px;
+            margin-top: 22px;
 
-            padding: 13px 28px;
+            padding: 14px 32px;
 
-            background: linear-gradient(
-                135deg,
-                #c99bd6,
-                #a99be8
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #c99bd6,
+                    #a99be8
+                );
 
             color: white;
 
@@ -130,50 +330,66 @@
 
             border-radius: 30px;
 
-            font-size: 16px;
+            font-size: 17px;
 
             font-weight: bold;
 
             box-shadow:
-                0 8px 20px rgba(150, 120, 180, 0.25);
+                0 10px 25px rgba(150, 120, 180, 0.28);
 
-            transition: all 0.3s ease;
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease;
         }
 
 
         .btn:hover {
-            transform: translateY(-3px);
+
+            transform: translateY(-5px) scale(1.03);
 
             box-shadow:
-                0 12px 25px rgba(150, 120, 180, 0.35);
+                0 15px 30px rgba(150, 120, 180, 0.38);
         }
 
 
-        /* สำหรับมือถือ */
+        /* มือถือ */
 
         @media (max-width: 600px) {
 
             body {
+
                 padding: 30px 15px;
             }
 
             .card {
-                padding: 30px 20px;
-                border-radius: 30px;
+
+                padding: 32px 20px;
+
+                border-radius: 32px;
             }
 
             h1 {
+
                 font-size: 26px;
             }
 
             .profile-img {
-                width: 170px;
-                height: 215px;
+
+                width: 175px;
+
+                height: 220px;
             }
 
             p {
+
                 font-size: 16px;
             }
+
+            .decoration {
+
+                font-size: 22px;
+            }
+
         }
 
     </style>
@@ -184,25 +400,47 @@
 <body>
 
 
-    <!-- การ์ดโปรไฟล์ -->
+    <!-- ของตกแต่ง -->
+
+    <div class="decoration flower1">🌷</div>
+
+    <div class="decoration flower2">🌸</div>
+
+    <div class="decoration heart1">♡</div>
+
+    <div class="decoration heart2">💗</div>
+
+    <div class="decoration star1">✦</div>
+
+    <div class="decoration star2">✧</div>
+
+
+    <!-- การ์ดหลัก -->
 
     <div class="card">
 
 
-        <!-- หัวข้ออยู่ด้านบนสุด -->
+        <!-- หัวข้อ -->
 
         <h1>
             ยินดีต้อนรับสู่โปรไฟล์ของฉัน 🌷
         </h1>
 
 
-        <!-- รูปโปรไฟล์ -->
+        <div class="line"></div>
 
-        <img
-            src="IMG_1798.jpeg"
-            alt="รูปโปรไฟล์"
-            class="profile-img"
-        >
+
+        <!-- รูป -->
+
+        <div class="profile-frame">
+
+            <img
+                src="IMG_1798.jpeg"
+                alt="รูปโปรไฟล์"
+                class="profile-img"
+            >
+
+        </div>
 
 
         <!-- ข้อมูล -->
@@ -219,19 +457,18 @@
         </p>
 
 
-        <p>
-            นี่คือเว็บไซต์แรกของดิฉัน
-            ที่โฮสต์บน GitHub Pages! ✨
+        <p class="welcome-text">
+            Welcome to my little world ♡
         </p>
 
 
     </div>
 
 
-    <!-- ปุ่มอยู่นอกการ์ด -->
+    <!-- ปุ่ม -->
 
     <a href="portfolio.html" class="btn">
-        หน้าถัดไป → 
+        หน้าถัดไป → ✨
     </a>
 
 
