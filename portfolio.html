@@ -2,210 +2,313 @@
 <html lang="th">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio ของฉัน | สุภาพิชญ์ ชินวุฒิ</title>
+    <title>My Portfolio</title>
 
-<style>
+    <style>
 
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #fff0f5, #eee5ff);
-    color: #555;
-    padding: 40px 20px;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-}
+        body {
+            margin: 0;
+            min-height: 100vh;
 
-.header {
-    background: rgba(255,255,255,0.9);
-    padding: 35px;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    margin-bottom: 25px;
-}
+            background:
+                radial-gradient(circle at top left, #fff1f8, transparent 35%),
+                radial-gradient(circle at bottom right, #e8e0ff, transparent 35%),
+                linear-gradient(135deg, #ffeaf4, #eee7ff, #e5f3ff);
 
-.header h1 {
-    color: #6d5875;
-    font-size: 34px;
-    margin-bottom: 10px;
-}
+            font-family: Arial, sans-serif;
 
-.header p {
-    font-size: 18px;
-    color: #777;
-}
+            color: #6d5875;
 
-.card {
-    background: rgba(255,255,255,0.92);
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
+            padding: 40px 20px;
+        }
 
-.card h2 {
-    color: #6d5875;
-    margin-top: 0;
-}
 
-.card h3 {
-    color: #806b89;
-}
+        /* หัวข้อใหญ่ */
 
-.card p {
-    font-size: 17px;
-    line-height: 1.8;
-}
+        .title {
+            text-align: center;
 
-.btn {
-    display: inline-block;
-    background: #6d5875;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 12px;
-    margin-top: 15px;
-}
+            color: #765b7d;
 
-.btn:hover {
-    background: #55445d;
-}
+            font-size: 36px;
 
-</style>
+            margin-bottom: 35px;
+        }
+
+
+        /* กล่องแต่ละหัวข้อ */
+
+        .section {
+            max-width: 750px;
+
+            margin: 0 auto 25px;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            padding: 28px;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 10px 30px rgba(120, 100, 150, 0.13);
+
+            border: 2px solid rgba(255, 255, 255, 0.7);
+
+            backdrop-filter: blur(10px);
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+
+        .section:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px rgba(120, 100, 150, 0.18);
+        }
+
+
+        /* หัวข้อของแต่ละกล่อง */
+
+        h2 {
+            color: #a06caf;
+
+            margin-top: 0;
+
+            font-size: 24px;
+        }
+
+
+        /* ข้อความ */
+
+        p {
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin: 8px 0;
+        }
+
+
+        /* รายการ */
+
+        ul {
+            line-height: 2;
+
+            padding-left: 25px;
+        }
+
+
+        li {
+            margin-bottom: 5px;
+        }
+
+
+        /* ตัวหนังสือสำคัญ */
+
+        strong {
+            color: #a06caf;
+        }
+
+
+        /* ปุ่มกลับหน้าแรก */
+
+        .btn {
+            display: block;
+
+            width: fit-content;
+
+            margin: 35px auto 10px;
+
+            padding: 13px 28px;
+
+            background: linear-gradient(
+                135deg,
+                #c99bd6,
+                #a99be8
+            );
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 8px 20px rgba(150, 120, 180, 0.25);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 25px rgba(150, 120, 180, 0.35);
+        }
+
+
+        /* มือถือ */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 30px 15px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .section {
+                padding: 22px;
+
+                border-radius: 25px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            p,
+            li {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<div class="container">
 
-    <div class="header">
+    <!-- หัวข้อ -->
 
-        <h1>MY PORTFOLIO</h1>
+    <h1 class="title">
+        My Portfolio 🌷✨
+    </h1>
+
+
+    <!-- About Me -->
+
+    <div class="section">
+
+        <h2>🌸 About Me</h2>
 
         <p>
-            แฟ้มสะสมผลงานของ<br>
+            สวัสดีค่ะ ดิฉันชื่อ
             <strong>สุภาพิชญ์ ชินวุฒิ</strong>
         </p>
 
         <p>
-            ยินดีต้อนรับเข้าสู่ Portfolio ของฉัน ♡
+            เป็นนักเรียนที่สนใจด้าน
+            <strong>Biology & Mathematics</strong>
         </p>
 
     </div>
 
 
-    <div class="card">
+    <!-- Education -->
 
-        <h2>👤 About Me</h2>
-
-        <p>
-            สวัสดีค่ะ ดิฉันชื่อ สุภาพิชญ์ ชินวุฒิ
-        </p>
-
-        <p>
-            เป็นนักเรียนที่สนใจด้าน Biology และ Mathematics
-            และกำลังพัฒนาความรู้และทักษะของตนเอง
-            เพื่อนำไปต่อยอดในการศึกษาต่อในระดับมหาวิทยาลัย
-        </p>
-
-    </div>
-
-
-    <div class="card">
+    <div class="section">
 
         <h2>🎓 Education</h2>
 
-        <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
-
         <p>
-            กำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาปีที่ 6
+            กำลังศึกษาอยู่ในระดับมัธยมศึกษาตอนปลาย
         </p>
 
         <p>
-            วิชาที่สนใจ: Biology, Chemistry, Mathematics และ English
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h2>🏆 Activities</h2>
-
-        <h3>กิจกรรมที่เข้าร่วม</h3>
-
-        <p>
-            • กิจกรรมภายในโรงเรียน
-        </p>
-
-        <p>
-            • กิจกรรมด้านการเรียนรู้และพัฒนาตนเอง
-        </p>
-
-        <p>
-            • กิจกรรมที่เกี่ยวข้องกับการศึกษาต่อ
+            มีความสนใจในการศึกษาต่อระดับมหาวิทยาลัย
         </p>
 
     </div>
 
 
-    <div class="card">
+    <!-- Activities -->
 
-        <h2>📜 Certificates</h2>
+    <div class="section">
 
-        <p>
-            รวมเกียรติบัตรและประกาศนียบัตรที่ได้รับ
-        </p>
+        <h2>🌷 Activities</h2>
 
-        <p>
-            สามารถเพิ่มรูปเกียรติบัตรในส่วนนี้ได้ในภายหลัง
-        </p>
+        <ul>
 
-    </div>
+            <li>เข้าร่วมกิจกรรมของโรงเรียน</li>
 
+            <li>ทำกิจกรรมร่วมกับเพื่อน ๆ</li>
 
-    <div class="card">
+            <li>เรียนรู้และพัฒนาทักษะใหม่ ๆ</li>
 
-        <h2>🧪 My Works</h2>
-
-        <h3>ผลงานและโครงงาน</h3>
-
-        <p>
-            รวบรวมผลงาน โครงงาน และสิ่งที่ได้เรียนรู้
-            จากการศึกษาและกิจกรรมต่าง ๆ
-        </p>
+        </ul>
 
     </div>
 
 
-    <div class="card">
+    <!-- Certificates -->
 
-        <h2>🎯 My Goal</h2>
+    <div class="section">
+
+        <h2>🏆 Certificates</h2>
 
         <p>
-            ตั้งใจพัฒนาความรู้ ความสามารถ และประสบการณ์
-            เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อในอนาคต
+            รวบรวมเกียรติบัตรและผลงานต่าง ๆ
+            ที่ได้รับจากการเข้าร่วมกิจกรรม
         </p>
 
     </div>
 
 
-    <div style="text-align:center;">
+    <!-- My Works -->
 
-        <a href="index.html" class="btn">
-            ← กลับหน้าแรก
-        </a>
+    <div class="section">
+
+        <h2>🎀 My Works</h2>
+
+        <p>
+            ผลงานและโปรเจกต์ที่ได้ทำระหว่างการเรียน
+            รวมถึงเว็บไซต์ Portfolio นี้
+        </p>
 
     </div>
 
-</div>
+
+    <!-- My Goal -->
+
+    <div class="section">
+
+        <h2>💗 My Goal</h2>
+
+        <p>
+            ตั้งใจพัฒนาตนเองและเรียนรู้สิ่งใหม่ ๆ
+            เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อ
+            และอนาคตของตัวเอง
+        </p>
+
+    </div>
+
+
+    <!-- ปุ่มกลับ -->
+
+    <a href="index.html" class="btn">
+        ← กลับหน้าแรก
+    </a>
+
 
 </body>
+
 </html>
