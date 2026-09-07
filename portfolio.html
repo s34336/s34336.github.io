@@ -1,562 +1,924 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Portfolio 🌷</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-
-            font-family: Arial, sans-serif;
-
-            color: #6d5875;
-
-            overflow-x: hidden;
-
-            background:
-                radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 25%),
-                radial-gradient(circle at 90% 20%, #f8dfff 0%, transparent 30%),
-                radial-gradient(circle at 20% 90%, #dff5ff 0%, transparent 30%),
-                linear-gradient(
-                    135deg,
-                    #ffeaf4,
-                    #eee7ff,
-                    #e5f3ff
-                );
-
-            padding: 45px 20px;
-        }
-
-
-        /* ของตกแต่ง */
-
-        .decoration {
-            position: fixed;
-
-            pointer-events: none;
-
-            z-index: 0;
-
-            font-size: 28px;
-
-            animation: float 4s ease-in-out infinite;
-        }
-
-
-        .flower1 {
-            top: 8%;
-            left: 6%;
-        }
-
-
-        .flower2 {
-            top: 20%;
-            right: 7%;
-
-            animation-delay: 1s;
-        }
-
-
-        .heart1 {
-            bottom: 15%;
-            left: 7%;
-
-            animation-delay: 2s;
-        }
-
-
-        .heart2 {
-            bottom: 8%;
-            right: 9%;
-
-            animation-delay: 1.5s;
-        }
-
-
-        .star1 {
-            top: 45%;
-            left: 4%;
-
-            font-size: 20px;
-
-            animation-delay: .5s;
-        }
-
-
-        .star2 {
-            top: 55%;
-            right: 4%;
-
-            font-size: 20px;
-
-            animation-delay: 2.5s;
-        }
-
-
-        @keyframes float {
-
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-12px) rotate(5deg);
-            }
-
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-        }
-
-
-        /* ส่วนหัว */
-
-        .header {
-            position: relative;
-
-            z-index: 1;
-
-            text-align: center;
-
-            margin-bottom: 35px;
-
-            animation: appear 1s ease;
-        }
-
-
-        .header h1 {
-            margin: 0;
-
-            color: #765b7d;
-
-            font-size: 38px;
-
-            line-height: 1.4;
-        }
-
-
-        .header p {
-            margin-top: 10px;
-
-            color: #9a829f;
-
-            font-size: 16px;
-        }
-
-
-        .line {
-            width: 100px;
-
-            height: 3px;
-
-            margin: 18px auto;
-
-            border-radius: 10px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #f2b7d5,
-                    #c8b6f2,
-                    #b8dff2
-                );
-        }
-
-
-        /* การ์ด */
-
-        .section {
-            position: relative;
-
-            z-index: 1;
-
-            max-width: 750px;
-
-            margin: 0 auto 25px;
-
-            padding: 30px;
-
-            background: rgba(255, 255, 255, 0.82);
-
-            border-radius: 35px;
-
-            border: 2px solid rgba(255, 255, 255, 0.85);
-
-            box-shadow:
-                0 15px 40px rgba(120, 100, 150, 0.14);
-
-            backdrop-filter: blur(14px);
-
-            animation: appear 1s ease;
-
-            transition:
-                transform .3s ease,
-                box-shadow .3s ease;
-        }
-
-
-        .section:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 20px 45px rgba(120, 100, 150, 0.20);
-        }
-
-
-        @keyframes appear {
-
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-
-        /* หัวข้อแต่ละส่วน */
-
-        h2 {
-            margin-top: 0;
-
-            color: #a06caf;
-
-            font-size: 25px;
-        }
-
-
-        /* ข้อความ */
-
-        p {
-            font-size: 17px;
-
-            line-height: 1.8;
-
-            margin: 8px 0;
-        }
-
-
-        strong {
-            color: #a06caf;
-        }
-
-
-        /* รายการ */
-
-        ul {
-            padding-left: 25px;
-
-            line-height: 2;
-
-            margin-bottom: 0;
-        }
-
-
-        li {
-            margin-bottom: 5px;
-        }
-
-
-        /* กล่องย่อย */
-
-        .mini-box {
-            margin-top: 15px;
-
-            padding: 15px 18px;
-
-            background: rgba(255, 240, 248, 0.7);
-
-            border-radius: 20px;
-
-            border: 1px solid rgba(220, 190, 220, 0.5);
-        }
-
-
-        /* ปุ่ม */
-
-        .btn {
-            position: relative;
-
-            z-index: 2;
-
-            display: block;
-
-            width: fit-content;
-
-            margin: 35px auto 10px;
-
-            padding: 14px 32px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #c99bd6,
-                    #a99be8
-                );
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 30px;
-
-            font-size: 17px;
-
-            font-weight: bold;
-
-            box-shadow:
-                0 10px 25px rgba(150, 120, 180, 0.28);
-
-            transition: all .3s ease;
-        }
-
-
-        .btn:hover {
-            transform: translateY(-5px) scale(1.03);
-
-            box-shadow:
-                0 15px 30px rgba(150, 120, 180, 0.38);
-        }
-
-
-        /* มือถือ */
-
-        @media (max-width: 600px) {
-
-            body {
-                padding: 30px 15px;
-            }
-
-
-            .header h1 {
-                font-size: 29px;
-            }
-
-
-            .section {
-                padding: 23px;
-
-                border-radius: 30px;
-            }
-
-
-            h2 {
-                font-size: 22px;
-            }
-
-
-            p,
-            li {
-                font-size: 16px;
-            }
-
-
-            .decoration {
-                font-size: 22px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Supapit Chinnawut | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Mitr", sans-serif;
+  color: #55405f;
+  background:
+    radial-gradient(circle at 10% 10%, #ffd9ed 0 6%, transparent 7%),
+    radial-gradient(circle at 90% 18%, #ded0ff 0 6%, transparent 7%),
+    linear-gradient(135deg, #fff5fb, #f4edff);
+  overflow-x: hidden;
+}
+
+/* ---------- ดาวตกแต่ง ---------- */
+
+.star {
+  position: fixed;
+  color: #c996e8;
+  font-size: 25px;
+  z-index: 0;
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.star1 { top: 12%; left: 4%; }
+.star2 { top: 30%; right: 5%; animation-delay: 1s; }
+.star3 { top: 65%; left: 6%; animation-delay: 2s; }
+.star4 { top: 82%; right: 6%; animation-delay: .5s; }
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+}
+
+/* ---------- เมนู ---------- */
+
+nav {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(94%, 950px);
+  padding: 12px 18px;
+  border-radius: 50px;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(130,70,150,.15);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  border: 2px solid white;
+}
+
+nav a {
+  text-decoration: none;
+  color: #80518f;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: .3s;
+}
+
+nav a:hover {
+  background: #efc5e5;
+  color: white;
+}
+
+/* ---------- หน้าแรก ---------- */
+
+.hero {
+  min-height: 100vh;
+  padding: 125px 6% 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card {
+  width: min(1100px, 100%);
+  min-height: 600px;
+  padding: 60px;
+  border-radius: 45px;
+  background:
+    linear-gradient(
+      rgba(255,255,255,.9),
+      rgba(255,255,255,.92)
+    ),
+    linear-gradient(135deg,#ffd3eb,#d9ccff);
+  border: 3px solid white;
+  box-shadow: 0 25px 70px rgba(130,70,150,.18);
+
+  display: flex;
+  align-items: center;
+  gap: 65px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: "🌸";
+  position: absolute;
+  right: 25px;
+  top: -30px;
+  font-size: 120px;
+  opacity: .3;
+}
+
+.hero-card::after {
+  content: "★";
+  position: absolute;
+  bottom: -35px;
+  left: 30px;
+  font-size: 110px;
+  color: #dcbaf5;
+  opacity: .35;
+}
+
+/* ---------- รูปโปรไฟล์ ---------- */
+
+.profile-area {
+  position: relative;
+  flex: 0 0 310px;
+  text-align: center;
+}
+
+.profile-area::before {
+  content: "♡";
+  position: absolute;
+  left: -35px;
+  top: -55px;
+  font-size: 100px;
+  color: #efb6dd;
+}
+
+.profile-area::after {
+  content: "🌸";
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  font-size: 55px;
+}
+
+.profile {
+  width: 290px;
+  height: 360px;
+
+  object-fit: cover;
+
+  border-radius: 150px 150px 45px 45px;
+
+  border: 9px solid white;
+
+  box-shadow:
+    0 18px 45px rgba(139,76,160,.25);
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+}
+
+.welcome {
+  font-family: "Itim", cursive;
+  color: #bc66a5;
+  font-size: clamp(27px,4vw,43px);
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-family: "Itim", cursive;
+  color: #75468c;
+  font-size: clamp(50px,7vw,80px);
+  line-height: 1;
+}
+
+.name-thai {
+  color: #9b65a9;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.intro {
+  margin-top: 22px;
+  line-height: 2;
+  font-size: 17px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(90deg,#e9b6dc,#cbb5f2);
+  color: white;
+  box-shadow: 0 8px 20px rgba(170,110,190,.2);
+}
+
+/* ---------- Section ---------- */
+
+section {
+  width: min(1100px,90%);
+  margin: auto;
+  padding: 90px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title .small {
+  color: #bd75aa;
+  font-family: "Itim", cursive;
+  font-size: 25px;
+}
+
+.section-title h2 {
+  font-family: "Itim", cursive;
+  color: #75468c;
+  font-size: 48px;
+}
+
+.section-title p {
+  color: #927b98;
+  margin-top: 5px;
+}
+
+/* ---------- About ---------- */
+
+.about-box {
+  background: rgba(255,255,255,.85);
+  border: 2px solid white;
+  border-radius: 35px;
+  padding: 40px;
+  box-shadow: 0 15px 45px rgba(140,85,160,.12);
+  line-height: 2;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.info-card {
+  padding: 25px;
+  border-radius: 25px;
+  background: linear-gradient(135deg,#fff0f9,#f0e9ff);
+  border: 2px solid white;
+}
+
+.info-card h3 {
+  color: #9c5a9e;
+  margin-bottom: 8px;
+}
+
+/* ---------- Activities ---------- */
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 28px;
+}
+
+.activity-card {
+  background: rgba(255,255,255,.92);
+  border-radius: 32px;
+  padding: 18px;
+  border: 3px solid white;
+  box-shadow: 0 15px 40px rgba(130,70,150,.12);
+  transition: .35s;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(130,70,150,.2);
+}
+
+.activity-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 23px;
+  display: block;
+}
+
+.activity-content {
+  padding: 20px 10px 10px;
+}
+
+.activity-content h3 {
+  font-family: "Itim", cursive;
+  color: #784888;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.activity-content p {
+  line-height: 1.8;
+  color: #66556d;
+  font-size: 15px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #f3d8ed;
+  color: #925a94;
+  font-size: 13px;
+}
+
+/* ---------- Certificates ---------- */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.cert-card {
+  background: rgba(255,255,255,.93);
+  padding: 13px;
+  border-radius: 27px;
+  border: 3px solid white;
+  box-shadow: 0 12px 35px rgba(120,70,150,.13);
+  transition: .3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-7px);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.cert-card h3 {
+  font-size: 17px;
+  color: #784888;
+  margin: 15px 5px 5px;
+}
+
+.cert-card p {
+  font-size: 13px;
+  color: #806d86;
+  line-height: 1.6;
+  padding: 0 5px 10px;
+}
+
+/* ---------- Goal ---------- */
+
+.goal {
+  background: linear-gradient(135deg,#efc7e3,#d9cdf7);
+  border-radius: 40px;
+  padding: 55px;
+  text-align: center;
+  border: 4px solid white;
+  box-shadow: 0 20px 55px rgba(135,86,160,.18);
+}
+
+.goal .icons {
+  font-size: 50px;
+}
+
+.goal h2 {
+  font-family: "Itim", cursive;
+  font-size: 55px;
+  color: #714584;
+  margin: 15px 0;
+}
+
+.goal p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 2;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255,255,255,.75);
+  color: #8b7092;
+  line-height: 2;
+}
+
+footer .cat {
+  font-size: 40px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:800px) {
+
+  .hero-card {
+    padding: 40px 25px;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .profile-area {
+    flex-basis: auto;
+  }
+
+  .profile {
+    width: 230px;
+    height: 290px;
+  }
+
+  .about-grid,
+  .activity-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goal {
+    padding: 40px 22px;
+  }
+
+  .goal h2 {
+    font-size: 42px;
+  }
+
+  nav {
+    width: 95%;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 6px 9px;
+  }
+}
+</style>
 </head>
-
 
 <body>
 
-
-    <!-- ของตกแต่ง -->
-
-    <div class="decoration flower1">🌷</div>
-
-    <div class="decoration flower2">🌸</div>
-
-    <div class="decoration heart1">♡</div>
-
-    <div class="decoration heart2">💗</div>
-
-    <div class="decoration star1">✦</div>
-
-    <div class="decoration star2">✧</div>
+<div class="star star1">✦</div>
+<div class="star star2">✧</div>
+<div class="star star3">★</div>
+<div class="star star4">✦</div>
 
 
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <!-- ส่วนหัว -->
-
-    <div class="header">
-
-        <h1>
-            My Portfolio 🌷✨
-        </h1>
-
-        <div class="line"></div>
-
-        <p>
-            Welcome to my portfolio ♡
-        </p>
-
-    </div>
+<nav>
+  <a href="#home">หน้าแรก 🏠</a>
+  <a href="#about">เกี่ยวกับฉัน 🌷</a>
+  <a href="#activities">กิจกรรม 🧪</a>
+  <a href="#certificates">เกียรติบัตร 🏆</a>
+  <a href="#goal">เป้าหมาย 🎓</a>
+</nav>
 
 
+<!-- =========================
+     HOME
+========================= -->
 
-    <!-- About Me -->
+<section class="hero" id="home">
 
-    <div class="section">
+  <div class="hero-card">
 
-        <h2>🌸 About Me</h2>
+    <div class="profile-area">
 
-        <p>
-            สวัสดีค่ะ ดิฉันชื่อ
-            <strong>สุภาพิชญ์ ชินวุฒิ</strong>
-        </p>
-
-        <p>
-            เป็นนักเรียนที่สนใจด้าน
-            <strong>Biology & Mathematics</strong>
-        </p>
-
-        <div class="mini-box">
-            ✨ สนใจเรียนรู้สิ่งใหม่ ๆ
-            และพัฒนาตัวเองอยู่เสมอ
-        </div>
+      <!-- รูปโปรไฟล์ -->
+      <img
+        src="IMG_1798.jpeg"
+        alt="รูปโปรไฟล์ Supapit Chinnawut"
+        class="profile"
+      >
 
     </div>
 
 
+    <div class="hero-text">
 
-    <!-- Education -->
+      <div class="welcome">
+        ✨ ยินดีต้อนรับสู่ Portfolio ของฉัน ✨
+      </div>
 
-    <div class="section">
+      <h1>Supapit</h1>
 
-        <h2>🎓 Education</h2>
+      <div class="name-thai">
+        น.ส.สุภาพิชญ์ ชินวุฒิ
+      </div>
+
+      <p class="intro">
+        Supapit Chinnawut<br>
+        กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6/3
+        แผนการเรียน MSEP
+      </p>
+
+      <div class="badge">
+        🩷 Biology & Chemistry Lover 🧪
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="section-title">
+    <div class="small">♡ About Me ♡</div>
+    <h2>เกี่ยวกับฉัน</h2>
+    <p>เรื่องราวเล็ก ๆ ของฉัน 🌸</p>
+  </div>
+
+
+  <div class="about-box">
+
+    <p>
+      ฉันเป็นนักเรียนที่มีความสนใจในด้านวิทยาศาสตร์สุขภาพ
+      โดยเฉพาะ <b>ชีววิทยาและเคมี</b>
+      ชอบเรียนรู้ผ่านการทดลองและการลงมือปฏิบัติจริง
+      เพราะช่วยให้เข้าใจเนื้อหาและมองเห็นภาพได้ชัดเจนยิ่งขึ้น
+    </p>
+
+
+    <div class="about-grid">
+
+      <div class="info-card">
+        <h3>🎧 งานอดิเรก</h3>
+        <p>
+          ฟังเพลง • อ่านการ์ตูน • อ่านหนังสือ
+          และใช้เวลาว่างเรียนรู้สิ่งใหม่ ๆ
+        </p>
+      </div>
+
+
+      <div class="info-card">
+        <h3>🔬 ความสนใจ</h3>
+        <p>
+          สนใจชีววิทยา การทำงานของร่างกายมนุษย์
+          ระบบต่าง ๆ ภายในร่างกาย
+          และการทดลองทางวิทยาศาสตร์
+        </p>
+      </div>
+
+
+      <div class="info-card">
+        <h3>🧬 วิชาที่ชอบ</h3>
+        <p>
+          ชีววิทยา และเคมี
+        </p>
+      </div>
+
+
+      <div class="info-card">
+        <h3>🐱 สิ่งที่ชอบ</h3>
+        <p>
+          สีชมพู สีม่วง แมว ดวงดาว
+          และดอกซากุระ 🌸
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ACTIVITIES
+========================= -->
+
+<section id="activities">
+
+  <div class="section-title">
+    <div class="small">♡ My Activities ♡</div>
+    <h2>กิจกรรมที่ภาคภูมิใจ</h2>
+    <p>ประสบการณ์จากการเรียนรู้และลงมือทำจริง ✨</p>
+  </div>
+
+
+  <div class="activity-grid">
+
+
+    <!-- หัวใจหมู -->
+
+    <div class="activity-card">
+
+      <img
+        src="IMG_3365.jpeg"
+        alt="กิจกรรมผ่าหัวใจหมู"
+      >
+
+      <div class="activity-content">
+
+        <h3>🫀 ศึกษาโครงสร้างของหัวใจหมู</h3>
 
         <p>
-            กำลังศึกษาอยู่ในระดับ
-            <strong>มัธยมศึกษาตอนปลาย</strong>
+          ได้ลงมือผ่าหัวใจหมูเพื่อศึกษาส่วนต่าง ๆ
+          ของหัวใจ และเรียนรู้การทำงานของหัวใจ
+          รวมถึงการสูบฉีดเลือดของหัวใจแต่ละห้อง
         </p>
 
-        <p>
-            มีความสนใจในการศึกษาต่อระดับมหาวิทยาลัย
-            และต้องการพัฒนาความรู้ของตัวเองต่อไป
-        </p>
+        <span class="tag">
+          Biology • Hands-on Learning
+        </span>
+
+      </div>
 
     </div>
 
 
+    <!-- ปอดหมู -->
 
-    <!-- Activities -->
+    <div class="activity-card">
 
-    <div class="section">
+      <img
+        src="IMG_2068.jpeg"
+        alt="กิจกรรมศึกษาปอดหมู"
+      >
 
-        <h2>🌷 Activities</h2>
+      <div class="activity-content">
 
-        <ul>
-
-            <li>
-                เข้าร่วมกิจกรรมของโรงเรียน
-            </li>
-
-            <li>
-                ทำกิจกรรมร่วมกับเพื่อน ๆ
-            </li>
-
-            <li>
-                ฝึกการทำงานร่วมกับผู้อื่น
-            </li>
-
-            <li>
-                เรียนรู้และพัฒนาทักษะใหม่ ๆ
-            </li>
-
-        </ul>
-
-    </div>
-
-
-
-    <!-- Certificates -->
-
-    <div class="section">
-
-        <h2>🏆 Certificates</h2>
+        <h3>🫁 ศึกษาการทำงานของปอด</h3>
 
         <p>
-            รวบรวมเกียรติบัตรและผลงานต่าง ๆ
-            ที่ได้รับจากการเข้าร่วมกิจกรรม
-            และการเรียนรู้
+          สอดท่อและเป่าลมเข้าไปในปอดหมู
+          เพื่อสังเกตการขยายตัว พอง และยุบตัว
+          เป็นการจำลองการทำงานของปอด
+          ในกระบวนการหายใจ
         </p>
 
-        <div class="mini-box">
-            🏆 สามารถเพิ่มรูปเกียรติบัตร
-            ของตัวเองในส่วนนี้ได้ภายหลัง
-        </div>
+        <span class="tag">
+          Biology • Respiratory System
+        </span>
+
+      </div>
 
     </div>
 
 
+    <!-- เคมี -->
 
-    <!-- My Works -->
+    <div class="activity-card">
 
-    <div class="section">
+      <img
+        src="IMG_5654.jpeg"
+        alt="กิจกรรมเคมี"
+      >
 
-        <h2>🎀 My Works</h2>
+      <div class="activity-content">
+
+        <h3>🧪 กิจกรรมการทดลองเคมี</h3>
 
         <p>
-            ผลงานและโปรเจกต์ที่ได้ทำระหว่างการเรียน
-            รวมถึงเว็บไซต์ Portfolio นี้
+          ได้เรียนรู้ผ่านการทดลองทางเคมี
+          ฝึกการสังเกต การตั้งข้อสังเกต
+          และการทำงานอย่างเป็นขั้นตอน
         </p>
 
-        <div class="mini-box">
-            💻 My first GitHub Pages Portfolio
-        </div>
+        <span class="tag">
+          Chemistry • Experiment
+        </span>
+
+      </div>
 
     </div>
 
 
+    <!-- ค่ายพี่สอนน้อง -->
 
-    <!-- My Goal -->
+    <div class="activity-card">
 
-    <div class="section">
+      <img
+        src="IMG_5761.jpeg"
+        alt="ค่ายพี่สอนน้อง"
+      >
 
-        <h2>💗 My Goal</h2>
+      <div class="activity-content">
+
+        <h3>🧑‍🏫 ค่ายพี่สอนน้อง</h3>
 
         <p>
-            ตั้งใจพัฒนาตนเองและเรียนรู้สิ่งใหม่ ๆ
-            เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อ
-            และอนาคตของตัวเอง
+          เข้าร่วมกิจกรรมค่ายพี่สอนน้อง
+          โรงเรียนบ้านห้วยมะไฟ
+          โดยสอนน้อง ๆ ทำการทดลองเคมี
+          เช่น การเขียนข้อความด้วยเบกกิ้งโซดาผสมน้ำ
+          และใช้ผงขมิ้นกับน้ำยาล้างจาน
+          เพื่อทำให้ตัวอักษรปรากฏ
         </p>
 
-        <div class="mini-box">
-            🌟 Keep learning, keep growing ♡
-        </div>
+        <span class="tag">
+          Chemistry • Sharing Knowledge
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATES
+========================= -->
+
+<section id="certificates">
+
+  <div class="section-title">
+    <div class="small">♡ Certificates ♡</div>
+    <h2>เกียรติบัตร</h2>
+    <p>ประสบการณ์และความสำเร็จที่ฉันเก็บสะสมไว้ 🌷</p>
+  </div>
+
+
+  <div class="cert-grid">
+
+
+    <!-- ป้องกันการทุจริต -->
+
+    <div class="cert-card">
+
+      <img
+        src="IMG_4450.jpeg"
+        alt="เกียรติบัตรป้องกันการทุจริต"
+      >
+
+      <h3>🛡️ ป้องกันการทุจริต</h3>
+
+      <p>
+        กิจกรรมที่ส่งเสริมความซื่อสัตย์
+        ความรับผิดชอบ และการประพฤติตนอย่างเหมาะสม
+      </p>
 
     </div>
 
 
+    <!-- คุณธรรม -->
 
-    <!-- ปุ่มกลับหน้าแรก -->
+    <div class="cert-card">
 
-    <a href="index.html" class="btn">
-        ← กลับหน้าแรก 🏠
-    </a>
+      <img
+        src="IMG_0360.jpeg"
+        alt="เกียรติบัตรพัฒนาคุณธรรมจริยธรรม"
+      >
 
+      <h3>🌸 พัฒนาคุณธรรมจริยธรรม</h3>
+
+      <p>
+        เข้าร่วมกิจกรรมค่ายพัฒนาคุณธรรม
+        จริยธรรมนักเรียน
+        เพื่อส่งเสริมความรับผิดชอบและการอยู่ร่วมกับผู้อื่น
+      </p>
+
+    </div>
+
+
+    <!-- EEC -->
+
+    <div class="cert-card">
+
+      <img
+        src="IMG_5760.jpeg"
+        alt="เกียรติบัตรเปิดบ้าน EEC"
+      >
+
+      <h3>🏫 เปิดบ้านต้อนรับ EEC</h3>
+
+      <p>
+        เข้าร่วมกิจกรรมมหกรรมวิชาการ
+        สืบสานวัฒนธรรม เลิศล้ำอาหาร
+        และกิจกรรมเปิดบ้านต้อนรับ EEC
+      </p>
+
+    </div>
+
+
+    <!-- สุขภาพจิต -->
+
+    <div class="cert-card">
+
+      <img
+        src="IMG_5759.jpeg"
+        alt="เกียรติบัตรใส่ใจสุขภาพจิต"
+      >
+
+      <h3>💗 วัยรุ่นยุคใหม่ ใส่ใจสุขภาพจิต</h3>
+
+      <p>
+        เข้าร่วมโครงการอบรมเพื่อเรียนรู้
+        และตระหนักถึงความสำคัญของสุขภาพจิต
+      </p>
+
+    </div>
+
+
+    <!-- Sudoku -->
+
+    <div class="cert-card">
+
+      <img
+        src="IMG_5758.jpeg"
+        alt="เกียรติบัตรการแข่งขัน SUDOKU"
+      >
+
+      <h3>🧩 การแข่งขัน SUDOKU</h3>
+
+      <p>
+        ฝึกทักษะการคิดวิเคราะห์
+        การแก้ปัญหา และการใช้เหตุผลอย่างเป็นระบบ
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     GOAL
+========================= -->
+
+<section id="goal">
+
+  <div class="section-title">
+    <div class="small">♡ My Dream ♡</div>
+    <h2>เป้าหมายในอนาคต</h2>
+  </div>
+
+
+  <div class="goal">
+
+    <div class="icons">
+      🧬 🩷 🔬
+    </div>
+
+    <h2>
+      มหาวิทยาลัยมหิดล
+    </h2>
+
+    <p>
+      ฉันตั้งใจศึกษาต่อในสายวิทยาศาสตร์สุขภาพ
+      และต้องการนำความรู้ด้านชีววิทยาและเคมี
+      ไปต่อยอดสู่การเรียนในระดับมหาวิทยาลัย
+      เพื่อพัฒนาตนเองและเติบโตไปสู่เส้นทางอาชีพ
+      ที่ตั้งใจไว้
+    </p>
+
+    <div style="margin-top:25px;font-size:30px;">
+      🌸 ✨ ⭐ 🐱 ⭐ ✨ 🌸
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="cat">
+    🐱🎀
+  </div>
+
+  <p>
+    Made with ♡ by Supapit Chinnawut
+  </p>
+
+  <p>
+    Biology • Chemistry • Dreams • Future
+  </p>
+
+  <p>
+    🌸 Keep learning, keep growing, keep dreaming 🌸
+  </p>
+
+</footer>
 
 </body>
-
 </html>
