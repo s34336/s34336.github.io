@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>กิจกรรมและประสบการณ์ | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff0f8, #f2e8ff, #eaf5ff);
+            color: #51445d;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        h1 {
+            font-family: 'Itim', cursive;
+            text-align: center;
+            font-size: 44px;
+            color: #925caf;
+            margin: 25px 0 35px;
+        }
+
+        .activity {
+            background: rgba(255,255,255,0.94);
+            border-radius: 28px;
+            padding: 25px;
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 25px;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(150,110,175,0.15);
+        }
+
+        .activity img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .activity h2 {
+            color: #80559a;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .activity p {
+            line-height: 1.8;
+            color: #6e6474;
+        }
+
+        .number {
+            color: #c080c9;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 10px 25px;
+            background: white;
+            color: #925caf;
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: 0 6px 20px rgba(150,110,175,0.12);
+        }
+
+        @media (max-width: 700px) {
+            .activity {
+                grid-template-columns: 1fr;
+            }
+
+            .activity img {
+                height: 250px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>กิจกรรมและประสบการณ์ 🧪</h1>
+
+    <article class="activity">
+        <img src="IMG_2068.jpeg" alt="กิจกรรมศึกษาปอดหมู">
+
+        <div>
+            <div class="number">ACTIVITY 01</div>
+            <h2>การศึกษาปอดหมู 🫁</h2>
+            <p>
+                ศึกษาโครงสร้างและการทำงานของปอดหมู
+                พร้อมสังเกตการขยายและหดตัวของปอดจากการทดลอง
+                เพื่อเรียนรู้กระบวนการทำงานของระบบหายใจ
+            </p>
+        </div>
+    </article>
+
+    <article class="activity">
+        <img src="IMG_3365.jpeg" alt="กิจกรรมศึกษาหัวใจหมู">
+
+        <div>
+            <div class="number">ACTIVITY 02</div>
+            <h2>การศึกษาหัวใจหมู 🫀</h2>
+            <p>
+                ศึกษาโครงสร้างภายในของหัวใจหมูและห้องต่าง ๆ ของหัวใจ
+                เพื่อทำความเข้าใจการทำงานของระบบไหลเวียนเลือด
+            </p>
+        </div>
+    </article>
+
+    <article class="activity">
+        <img src="IMG_1400.jpeg" alt="กิจกรรมทำสบู่">
+
+        <div>
+            <div class="number">ACTIVITY 03</div>
+            <h2>การทำสบู่จากปฏิกิริยาสปอนนิฟิเคชัน 🧼</h2>
+            <p>
+                ทดลองทำสบู่โดยใช้น้ำมันพืชทำปฏิกิริยากับ
+                สารละลายโซเดียมเอทานอล
+                เพื่อศึกษาปฏิกิริยาสปอนนิฟิเคชันและการเกิดสบู่
+            </p>
+        </div>
+    </article>
+
+    <a href="portfolio.html" class="back">← กลับหน้า Portfolio</a>
+
+</div>
+
+</body>
+</html>
