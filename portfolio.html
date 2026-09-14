@@ -3,1349 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Supapit Chinnawut</title>
 
-    <title>Supapit Chinnawut | Portfolio</title>
-
-    <meta name="description"
-        content="Portfolio ของ น.ส.สุภาพิชญ์ ชินวุฒิ นักเรียนชั้นมัธยมศึกษาปีที่ 6/3 แผนการเรียน MSEP">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600;700&family=Mitr:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --pink: #f6a6d8;
-            --pink-light: #ffe5f4;
-            --pink-soft: #fff5fb;
-            --purple: #b991e8;
-            --purple-dark: #76538e;
-            --lavender: #eadcff;
-            --blue-soft: #dff1ff;
-            --white: #ffffff;
-            --text: #6f5878;
-            --shadow: 0 15px 45px rgba(159, 108, 190, 0.18);
         }
 
         body {
-            font-family: "Kanit", sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(circle at 10% 10%, #ffe4f5 0%, transparent 25%),
-                radial-gradient(circle at 90% 20%, #e6d7ff 0%, transparent 28%),
-                radial-gradient(circle at 20% 90%, #dff2ff 0%, transparent 25%),
-                linear-gradient(135deg, #fff8fd, #f8f0ff);
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .floating {
-            position: fixed;
-            pointer-events: none;
-            z-index: 0;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .star1 {
-            top: 15%;
-            left: 3%;
-            font-size: 25px;
-        }
-
-        .star2 {
-            top: 42%;
-            right: 4%;
-            font-size: 22px;
-            animation-delay: 1s;
-        }
-
-        .star3 {
-            bottom: 20%;
-            left: 5%;
-            font-size: 20px;
-            animation-delay: 2s;
-        }
-
-        .star4 {
-            top: 70%;
-            right: 8%;
-            font-size: 28px;
-            animation-delay: 3s;
-        }
-
-        .cat-decoration {
-            position: absolute;
-            font-size: 45px;
-            opacity: .75;
-        }
-
-        .sakura {
-            position: absolute;
-            font-size: 35px;
-            opacity: .75;
-            animation: sakuraFloat 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%,100% {
-                transform: translateY(0) rotate(-5deg);
-            }
-
-            50% {
-                transform: translateY(-18px) rotate(5deg);
-            }
-        }
-
-        @keyframes sakuraFloat {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-15px) rotate(15deg);
-            }
-
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(35px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            padding: 15px 5%;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: auto;
-            background: rgba(255,255,255,.78);
-            backdrop-filter: blur(18px);
-            border: 2px solid rgba(255,255,255,.9);
-            border-radius: 30px;
-            padding: 12px 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: var(--shadow);
-        }
-
-        .logo {
-            font-family: "Itim", cursive;
-            font-size: 27px;
-            color: var(--purple-dark);
-        }
-
-        .logo span {
-            color: #ed85c6;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 8px;
-        }
-
-        .nav-links a {
-            padding: 9px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            transition: .3s;
-        }
-
-        .nav-links a:hover {
-            background: var(--pink-light);
-            color: #b35fa0;
-            transform: translateY(-2px);
-        }
-
-        .hero {
+            font-family: 'Kanit', sans-serif;
             min-height: 100vh;
-            padding: 150px 7% 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #fff0f8, #f2e8ff, #eaf5ff);
+            color: #51445d;
+            padding: 30px 20px;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: rgba(230,204,255,.45);
-            filter: blur(70px);
-            border-radius: 50%;
-            right: -150px;
-            top: 100px;
-        }
-
-        .hero-card {
-            width: min(1100px, 100%);
-            background: rgba(255,255,255,.82);
-            border: 3px solid rgba(255,255,255,.95);
-            border-radius: 55px;
-            padding: 55px;
-            box-shadow: 0 30px 80px rgba(133,90,164,.17);
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 65px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-            animation: fadeUp 1s ease;
-        }
-
-        .profile-wrap {
-            text-align: center;
-            position: relative;
-        }
-
-        .profile-frame {
-            width: 330px;
-            height: 400px;
-            margin: auto;
-            padding: 13px;
-            border-radius: 55px;
-            background: linear-gradient(135deg, #f4b5dc, #cdb2ff, #bde4ff);
-            box-shadow: 0 20px 45px rgba(161,114,192,.25);
-            transform: rotate(-2deg);
-        }
-
-        .profile-frame img {
+        .container {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 45px;
-            border: 8px solid white;
-        }
-
-        .profile-sticker {
-            position: absolute;
-            right: 20px;
-            bottom: -15px;
-            background: white;
-            border-radius: 50%;
-            padding: 14px;
-            font-size: 35px;
-            box-shadow: var(--shadow);
-            transform: rotate(8deg);
-        }
-
-        .hero-text .small-title {
-            font-family: "Itim", cursive;
-            color: #c47ab0;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .hero-text h1 {
-            font-size: clamp(42px, 6vw, 72px);
-            line-height: 1.05;
-            color: var(--purple-dark);
-            margin-bottom: 12px;
-        }
-
-        .hero-text h1 span {
-            color: #e58ac5;
-        }
-
-        .hero-text .english-name {
-            font-family: "Itim", cursive;
-            font-size: 25px;
-            color: #9c76bb;
-            margin-bottom: 25px;
-        }
-
-        .hero-description {
-            font-size: 17px;
-            line-height: 2;
-            margin-bottom: 25px;
-        }
-
-        .info-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .info-pill {
-            padding: 9px 16px;
-            background: linear-gradient(135deg, #ffe3f3, #eee2ff);
-            border-radius: 25px;
-            font-size: 14px;
-            color: #805e8f;
-            border: 1px solid white;
-        }
-
-        section {
-            padding: 110px 7%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section-title {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 55px;
-        }
-
-        .section-title span {
-            font-family: "Itim", cursive;
-            font-size: 21px;
-            color: #db81ba;
-            letter-spacing: 2px;
-        }
-
-        .section-title h2 {
-            font-size: 42px;
-            color: var(--purple-dark);
-            margin: 5px 0 10px;
-        }
-
-        .section-title p {
-            font-size: 16px;
-            line-height: 1.9;
-        }
-
-        .about-box {
-            max-width: 1050px;
-            margin: auto;
-            background: rgba(255,255,255,.83);
-            border-radius: 45px;
-            padding: 50px;
-            box-shadow: var(--shadow);
-            border: 2px solid white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-box::before {
-            content: "🌸";
-            position: absolute;
-            right: 30px;
-            top: 20px;
-            font-size: 50px;
-            opacity: .25;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
-        }
-
-        .about-item {
-            background: linear-gradient(135deg, #fff2fa, #f1eaff);
-            padding: 28px;
-            border-radius: 30px;
-            border: 2px solid white;
-        }
-
-        .about-item h3 {
-            color: #a166b2;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .about-item p {
-            line-height: 1.9;
-            font-size: 15px;
-        }
-
-        .about-full {
-            grid-column: 1 / -1;
-        }
-
-        .portfolio-section {
-            background: linear-gradient(
-                180deg,
-                rgba(255,238,249,.45),
-                rgba(237,224,255,.5)
-            );
-        }
-
-        .portfolio-grid {
-            max-width: 1150px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .portfolio-card {
-            background: rgba(255,255,255,.88);
-            border-radius: 35px;
-            overflow: hidden;
-            border: 2px solid white;
-            box-shadow: var(--shadow);
-            transition: .4s;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-10px) rotate(.5deg);
-            box-shadow: 0 25px 60px rgba(145,91,176,.23);
-        }
-
-        .card-image {
-            height: 300px;
-            padding: 15px;
-            background: linear-gradient(135deg,#f9d8eb,#e5d8ff);
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 25px;
-        }
-
-        .card-content {
-            padding: 28px;
-        }
-
-        .card-tag,
-        .certificate-tag {
-            display: inline-block;
-            padding: 6px 13px;
-            border-radius: 20px;
-            background: #f4e2ff;
-            color: #9663ac;
-            font-size: 12px;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .card-content h3 {
-            color: #76538e;
-            font-size: 22px;
-            margin-bottom: 13px;
-        }
-
-        .card-content p {
-            font-size: 15px;
-            line-height: 1.9;
-            margin-bottom: 10px;
-        }
-
-        .certificate-section {
-            background:
-                radial-gradient(circle at 90% 10%, #eadbff 0, transparent 22%),
-                radial-gradient(circle at 5% 90%, #ffe2f2 0, transparent 25%);
-        }
-
-        .certificate-grid {
-            max-width: 1150px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .certificate-card {
-            background: rgba(255,255,255,.9);
-            border-radius: 35px;
-            padding: 18px;
-            border: 2px solid white;
-            box-shadow: var(--shadow);
-            transition: .4s;
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .certificate-image {
-            height: 280px;
-            padding: 10px;
-            background: linear-gradient(135deg,#ffe4f3,#e6dcff);
-            border-radius: 27px;
-        }
-
-        .certificate-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 20px;
-            background: white;
-        }
-
-        .certificate-content {
-            padding: 22px 10px 10px;
-        }
-
-        .certificate-content h3 {
-            color: #76538e;
-            font-size: 21px;
-            line-height: 1.5;
-            margin-bottom: 12px;
-        }
-
-        .certificate-content p {
-            line-height: 1.9;
-            font-size: 15px;
-            margin-bottom: 12px;
-        }
-
-        .featured-certificate {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            padding: 25px;
-            background: linear-gradient(
-                135deg,
-                rgba(255,255,255,.95),
-                rgba(248,235,255,.95)
-            );
-        }
-
-        .featured-certificate .certificate-image {
-            height: 430px;
-        }
-
-        .certificate-highlight {
-            margin-top: 18px;
-            padding: 15px 18px;
-            border-radius: 22px;
-            background: linear-gradient(135deg,#ffe2f2,#e5dcff);
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .certificate-highlight span {
-            font-size: 25px;
-        }
-
-        .certificate-highlight p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .education-box {
-            max-width: 1050px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .education-card {
-            background: rgba(255,255,255,.88);
-            padding: 35px;
-            border-radius: 35px;
-            border: 2px solid white;
-            box-shadow: var(--shadow);
-        }
-
-        .education-card .icon {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .education-card h3 {
-            color: #805990;
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-
-        .education-card p {
-            line-height: 2;
-        }
-
-        .goal {
-            grid-column: 1 / -1;
-            text-align: center;
-            background: linear-gradient(135deg,#ffe4f3,#e9ddff);
-        }
-
-        .goal h3 {
-            font-size: 30px;
-        }
-
-        .goal strong {
-            color: #c45da5;
-        }
-
-        .contact-section {
-            padding-bottom: 130px;
-        }
-
-        .contact-card {
             max-width: 900px;
             margin: auto;
-            background: rgba(255,255,255,.9);
-            border-radius: 45px;
-            padding: 55px;
+        }
+
+        .header {
             text-align: center;
-            box-shadow: var(--shadow);
-            border: 2px solid white;
-            position: relative;
+            margin: 25px 0 40px;
         }
 
-        .contact-card h2 {
-            color: var(--purple-dark);
-            font-size: 38px;
-            margin-bottom: 10px;
+        .header h1 {
+            font-family: 'Itim', cursive;
+            font-size: 48px;
+            color: #925caf;
         }
 
-        .contact-card p {
-            line-height: 1.9;
-            margin-bottom: 30px;
+        .header p {
+            color: #817487;
+            margin-top: 8px;
         }
 
-        .contact-items {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
 
-        .contact-item {
-            background: linear-gradient(135deg,#ffe1f1,#e8dcff);
-            padding: 12px 22px;
+        .menu-card {
+            text-decoration: none;
+            color: inherit;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 28px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(150, 110, 175, 0.14);
+            border: 2px solid rgba(255,255,255,0.9);
+            transition: 0.25s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(150, 110, 175, 0.23);
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .menu-card h2 {
+            color: #80559a;
+            font-size: 24px;
+            margin-bottom: 7px;
+        }
+
+        .menu-card p {
+            color: #837788;
+            font-size: 14px;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 35px auto 0;
+            padding: 10px 25px;
             border-radius: 25px;
-            border: 2px solid white;
+            background: white;
+            color: #925caf;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(150,110,175,0.12);
         }
 
-        footer {
-            background: linear-gradient(135deg,#b98edc,#e59ac9);
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-            position: relative;
+        .back:hover {
+            background: #f7eafa;
         }
 
-        footer .footer-name {
-            font-family: "Itim", cursive;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-        footer p {
-            font-size: 13px;
-            opacity: .9;
-        }
-
-        /* ปุ่มกลับหน้าแรก */
-        .top-button {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            padding: 12px 20px;
-            border-radius: 30px;
-            background: linear-gradient(135deg,#efa5d1,#b89ae9);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 7px;
-            font-size: 15px;
-            box-shadow: 0 10px 25px rgba(133,89,166,.3);
-            z-index: 999;
-            transition: .3s;
-        }
-
-        .top-button:hover {
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        @media (max-width: 850px) {
-
-            header {
-                padding: 10px;
-            }
-
-            nav {
-                padding: 10px 15px;
-            }
-
-            .logo {
-                font-size: 22px;
-            }
-
-            .nav-links {
-                gap: 2px;
-            }
-
-            .nav-links a {
-                font-size: 11px;
-                padding: 7px 8px;
-            }
-
-            .hero {
-                padding: 120px 5% 60px;
-            }
-
-            .hero-card {
-                grid-template-columns: 1fr;
-                padding: 30px 20px 45px;
-                gap: 35px;
-                border-radius: 40px;
-            }
-
-            .profile-frame {
-                width: 250px;
-                height: 315px;
-            }
-
-            .hero-text {
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 43px;
-            }
-
-            .info-pills {
-                justify-content: center;
-            }
-
-            section {
-                padding: 80px 5%;
-            }
-
-            .section-title h2 {
-                font-size: 34px;
-            }
-
-            .about-content,
-            .portfolio-grid,
-            .certificate-grid,
-            .education-box {
+        @media (max-width: 650px) {
+            .menu {
                 grid-template-columns: 1fr;
             }
 
-            .featured-certificate {
-                grid-column: auto;
-                grid-template-columns: 1fr;
+            .header h1 {
+                font-size: 40px;
             }
-
-            .featured-certificate .certificate-image {
-                height: 300px;
-            }
-
-            .about-full,
-            .goal {
-                grid-column: auto;
-            }
-
-            .about-box {
-                padding: 25px;
-            }
-
-            .contact-card {
-                padding: 35px 22px;
-            }
-
-            .contact-card h2 {
-                font-size: 30px;
-            }
-
         }
-
     </style>
 </head>
 
 <body>
 
-    <div class="floating star1">⭐</div>
-    <div class="floating star2">✨</div>
-    <div class="floating star3">🌟</div>
-    <div class="floating star4">💫</div>
+<div class="container">
 
-    <div class="sakura" style="top: 25%; left: 7%;">🌸</div>
-    <div class="sakura" style="top: 55%; right: 5%; animation-delay: 2s;">🌸</div>
-    <div class="sakura" style="top: 85%; left: 10%; animation-delay: 3s;">🌸</div>
-
-    <header>
-        <nav>
-
-            <a href="#home" class="logo">
-                My<span>♡</span>
-            </a>
-
-            <ul class="nav-links">
-                <li><a href="#home">หน้าแรก</a></li>
-                <li><a href="#about">เกี่ยวกับฉัน</a></li>
-                <li><a href="#portfolio">กิจกรรม</a></li>
-                <li><a href="#certificates">เกียรติบัตร</a></li>
-                <li><a href="#education">การศึกษา</a></li>
-               
-            </ul>
-
-        </nav>
+    <header class="header">
+        <h1>My Portfolio ♡</h1>
+        <p>เลือกหัวข้อที่ต้องการดูได้เลย ✦</p>
     </header>
 
-    <main>
-
-        <!-- ==================== HOME ==================== -->
-
-        <section class="hero" id="home">
-
-            <div class="hero-card">
-
-                <div class="profile-wrap">
-
-                    <div class="profile-frame">
-                        <img src="IMG_5006.jpeg"
-                            alt="รูปโปรไฟล์ สุภาพิชญ์ ชินวุฒิ">
-                    </div>
-
-                    <div class="profile-sticker">
-                        🐱🌸
-                    </div>
-
-                </div>
-
-                <div class="hero-text">
-
-                    <div class="small-title">
-                        ✦ Welcome to my portfolio ✦
-                    </div>
-
-                    <h1>
-                        สุภาพิชญ์<br>
-                        <span>ชินวุฒิ</span>
-                    </h1>
-
-                    <div class="english-name">
-                        Supapit Chinnawut
-                    </div>
-
-                    <p class="hero-description">
-                        สวัสดีค่ะ ดิฉันชื่อ <strong>น.ส.สุภาพิชญ์ ชินวุฒิ</strong><br>
-                        กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6/3
-                        แผนการเรียน <strong>MSEP</strong>
-                    </p>
-
-                    <div class="info-pills">
-                        <div class="info-pill">🧬 Biology</div>
-                        <div class="info-pill">🧪 Chemistry</div>
-                        <div class="info-pill">🎓 M.6/3</div>
-                        <div class="info-pill">🌸 MSEP</div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ==================== ABOUT ==================== -->
-
-        <section id="about">
-
-            <div class="section-title">
-
-                <span>ABOUT ME 🌸</span>
-
-                <h2>เกี่ยวกับฉัน</h2>
-
-                <p>
-                    พื้นที่เล็ก ๆ ที่รวบรวมตัวตน ประสบการณ์
-                    และเส้นทางการเรียนรู้ของฉัน
-                </p>
-
-            </div>
-
-            <div class="about-box">
-
-                <div class="about-content">
-
-                    <div class="about-item">
-
-                        <h3>🎓 การศึกษา</h3>
-
-                        <p>
-                            ปัจจุบันกำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาปีที่ 6/3
-                            แผนการเรียน MSEP ซึ่งเป็นแผนการเรียนที่เน้นการเรียนรู้
-                            ทางคณิตศาสตร์ วิทยาศาสตร์ วิศวกรรมศาสตร์ และโปรแกรม
-                        </p>
-
-                    </div>
-
-                    <div class="about-item">
-
-                        <h3>🧬 ความสนใจทางวิชาการ</h3>
-
-                        <p>
-                            มีความสนใจด้านชีววิทยา โดยเฉพาะโครงสร้างและ
-                            การทำงานของอวัยวะ ระบบต่าง ๆ ของร่างกายมนุษย์
-                            รวมถึงการเรียนรู้ผ่านการทดลองและการลงมือปฏิบัติจริง
-                        </p>
-
-                    </div>
-
-                    <div class="about-item about-full">
-
-                        <h3>🌱 การเรียนรู้ของฉัน</h3>
-
-                        <p>
-                            การเรียนรู้สำหรับฉันไม่ได้จำกัดอยู่เพียงในห้องเรียน
-                            แต่ยังรวมถึงการเข้าร่วมกิจกรรม การทดลองทางวิทยาศาสตร์
-                            การทำงานร่วมกับผู้อื่น และการถ่ายทอดความรู้ให้แก่ผู้อื่น
-                        </p>
-
-                        <br>
-
-                        <p>
-                            ฉันตั้งใจสะสมประสบการณ์ต่าง ๆ เพื่อนำมาพัฒนาตนเอง
-                            และเตรียมความพร้อมสำหรับการศึกษาต่อในระดับมหาวิทยาลัย
-                            โดยเฉพาะด้านวิทยาศาสตร์สุขภาพ
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ==================== ACTIVITIES ==================== -->
-
-        <section id="portfolio" class="portfolio-section">
-
-            <div class="section-title">
-
-                <span>MY PORTFOLIO ⭐</span>
-
-                <h2>กิจกรรมและประสบการณ์</h2>
-
-                <p>
-                    ประสบการณ์ด้านชีววิทยาและการเรียนรู้จากการลงมือปฏิบัติจริง
-                    ที่ช่วยพัฒนาความสนใจด้านวิทยาศาสตร์สุขภาพ
-                </p>
-
-            </div>
-
-            <div class="portfolio-grid">
-
-                <!-- หัวใจ -->
-
-                <div class="portfolio-card">
-
-                    <div class="card-image">
-                        <img src="IMG_3365.jpeg"
-                            alt="กิจกรรมศึกษาหัวใจหมู">
-                    </div>
-
-                    <div class="card-content">
-
-                        <span class="card-tag">
-                            🧬 BIOLOGY
-                        </span>
-
-                        <h3>
-                            กิจกรรมศึกษาส่วนต่าง ๆ ของหัวใจ
-                        </h3>
-
-                        <p>
-                            ได้ศึกษาส่วนประกอบของหัวใจและความสัมพันธ์ระหว่าง
-                            โครงสร้างกับการทำงานของระบบหมุนเวียนเลือด
-                        </p>
-
-                        <p>
-                            ช่วยให้เข้าใจโครงสร้างของอวัยวะจากประสบการณ์จริง
-                        
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <!-- ปอด -->
-
-                <div class="portfolio-card">
-
-                    <div class="card-image">
-                        <img src="IMG_2068.jpeg"
-                            alt="กิจกรรมศึกษาปอดหมู">
-                    </div>
-
-                    <div class="card-content">
-
-                        <span class="card-tag">
-                            🫁 BIOLOGY
-                        </span>
-
-                        <h3>
-                            กิจกรรมศึกษาการทำงานของปอด
-                        </h3>
-
-                        <p>
-                            ได้ศึกษาการทำงานของปอดและสังเกตการขยายตัว
-                            จากการทดลองเป่าลมเข้าไปในปอดหมู
-                        </p>
-
-                        <p>
-                            ทำให้เข้าใจระบบหายใจและเห็นความสำคัญของ
-                            การศึกษาร่างกายมนุษย์
-                        </p>
-
-                    </div>
-
-                </div>
-
-                
-
-        </section>
-
-        <!-- ==================== CERTIFICATES ==================== -->
-
-        <section id="certificates" class="certificate-section">
-
-            <div class="section-title">
-
-                <span>MY CERTIFICATES 🌸</span>
-
-                <h2>เกียรติบัตร</h2>
-
-                <p>
-                    รวบรวมเกียรติบัตรจากการเรียนรู้ การอบรม
-                    และการเข้าร่วมกิจกรรม
-                </p>
-
-            </div>
-
-            <div class="certificate-grid">
-
-                <!-- เคมี -->
-
-                <div class="certificate-card featured-certificate">
-
-                    <div class="certificate-image">
-
-                        <img src="IMG_5654.jpeg"
-                            alt="เกียรติบัตรการเรียนออนไลน์และสอบเคมี">
-
-                    </div>
-
-                    <div class="certificate-content">
-
-                        <span class="certificate-tag">
-                            🧪 CHEMISTRY • CHULALONGKORN UNIVERSITY
-                        </span>
-
-                        <h3>
-                            การเรียนออนไลน์และการทดสอบความรู้ด้านเคมี
-                        </h3>
-
-                        <p>
-                            ได้เรียนรู้และทบทวนความรู้ด้านเคมีผ่านระบบออนไลน์
-                            พร้อมเข้ารับการทดสอบเพื่อประเมินความเข้าใจ
-                        </p>
-
-                        <p>
-                            ประสบการณ์นี้ช่วยฝึกการเรียนรู้ด้วยตนเอง
-                            การคิดวิเคราะห์ และการนำความรู้ทางเคมีไปประยุกต์ใช้
-                            ซึ่งเป็นพื้นฐานสำคัญต่อการเรียนด้านวิทยาศาสตร์สุขภาพ
-                        </p>
-
-                        <div class="certificate-highlight">
-
-                            <span>✦</span>
-
-                            <p>
-                                ฝึกทบทวนความรู้และคิดวิเคราะห์ด้านเคมี
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- โรงเรียนห้วยมะไฟ -->
-
-                <div class="certificate-card">
-
-                    <div class="certificate-image">
-
-                        <img src="IMG_5761.jpeg"
-                            alt="เกียรติบัตรค่ายพี่สอนน้อง โรงเรียนบ้านห้วยมะไฟ">
-
-                    </div>
-
-                    <div class="certificate-content">
-
-                        <span class="certificate-tag">
-                            🧪 SCIENCE ACTIVITY
-                        </span>
-
-                        <h3>
-                            ค่ายพี่สอนน้อง โรงเรียนบ้านห้วยมะไฟ
-                        </h3>
-
-                        <p>
-                            เข้าร่วมกิจกรรมค่ายพี่สอนน้องและมีส่วนร่วม
-                            ในการจัดกิจกรรมการทดลองทางวิทยาศาสตร์
-                        </p>
-
-                        <p>
-                            ได้เข้าร่วมกิจกรรมค่ายพี่สอนน้อง โดยมีส่วนร่วมในการทำและอธิบายการทดลองทางเคมี เช่น การเขียนข้อความลับด้วยเบกกิ้งโซดาผสมน้ำ และใช้สารละลายจากผงขมิ้นร่วมกับน้ำยาล้างจานเพื่อทำให้ข้อความปรากฏขึ้น กิจกรรมนี้ช่วยฝึกทักษะการทดลอง การสังเกต และการถ่ายทอดความรู้ทางวิทยาศาสตร์ให้ผู้อื่น
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <!-- SUDOKU -->
-
-                <div class="certificate-card">
-
-                    <div class="certificate-image">
-
-                        <img src="IMG_5758.jpeg"
-                            alt="เกียรติบัตรการแข่งขัน Sudoku">
-
-                    </div>
-
-                    <div class="certificate-content">
-
-                        <span class="certificate-tag">
-                            🧩 COMPETITION
-                        </span>
-
-                        <h3>
-                            เข้าร่วมการแข่งขัน SUDOKU
-                        </h3>
-
-                        <p>
-                            เข้าร่วมการแข่งขัน Sudoku ซึ่งช่วยฝึกการคิดวิเคราะห์
-                            การใช้เหตุผล และการแก้ปัญหาอย่างเป็นขั้นตอน
-                        </p>
-
-                        <p>
-                            ทักษะเหล่านี้สามารถนำไปประยุกต์ใช้กับการเรียน
-                            และการวิเคราะห์ข้อมูลทางวิทยาศาสตร์ได้
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ==================== EDUCATION ==================== -->
-
-        <section id="education">
-
-            <div class="section-title">
-
-                <span>MY JOURNEY 🎓</span>
-
-                <h2>การศึกษาและเป้าหมาย</h2>
-
-                <p>
-                    เส้นทางการเรียนรู้และเป้าหมายที่กำลังมุ่งไป
-                </p>
-
-            </div>
-
-            <div class="education-box">
-
-                <div class="education-card">
-
-                    <div class="icon">📚</div>
-
-                    <h3>
-                        ระดับมัธยมศึกษา
-                    </h3>
-
-                    <p>
-                        กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6/3
-                        แผนการเรียน MSEP
-                    </p>
-
-                    <br>
-
-                    <p>
-                        สนใจและให้ความสำคัญกับการเรียนรู้ทางด้าน
-                        วิทยาศาสตร์ โดยเฉพาะชีววิทยาและเคมี
-                    </p>
-
-                </div>
-
-                <div class="education-card">
-
-                    <div class="icon">🧬</div>
-
-                    <h3>
-                        ความสนใจทางวิทยาศาสตร์
-                    </h3>
-
-                    <p>
-                        สนใจการเรียนรู้เกี่ยวกับสิ่งมีชีวิต
-                        โครงสร้างและการทำงานของร่างกาย
-                        รวมถึงการทดลองทางวิทยาศาสตร์
-                    </p>
-
-                    <br>
-
-                    <p>
-                        การได้ลงมือปฏิบัติจริงจากกิจกรรมต่าง ๆ
-                        ทำให้เข้าใจเนื้อหาได้ลึกซึ้งและเห็นการประยุกต์ใช้
-                        ความรู้ทางวิทยาศาสตร์สุขภาพมากขึ้น
-                    </p>
-
-                </div>
-
-                <div class="education-card goal">
-
-                    <div class="icon">🎓🌸</div>
-
-                    <h3>
-                        เป้าหมายการศึกษาต่อ
-                    </h3>
-
-                    <p>
-                        มุ่งมั่นที่จะศึกษาต่อในระดับมหาวิทยาลัย
-                        โดยมีเป้าหมายที่
-                        <strong>มหาวิทยาลัยมหิดล คณะเทคนิคการแพทย์</strong>
-                    </p>
-
-                    <br>
-
-                    <p>
-                        ตั้งใจพัฒนาความรู้ ทักษะ และประสบการณ์
-                        เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อ
-                        และการทำงานในสายวิทยาศาสตร์สุขภาพ
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    
-            <div class="section-title">
-
-                <span>LET'S CONNECT 💌</span>
-
-                <h2>Contact Me</h2>
-
-                <p>
-                    ขอบคุณที่แวะเข้ามาทำความรู้จักกับฉัน
-                </p>
-
-            </div>
-
-            <div class="contact-card">
-
-                <div class="cat-decoration"
-                    style="top:25px; left:35px;">
-                    🐱
-                </div>
-
-                <div class="cat-decoration"
-                    style="bottom:25px; right:35px;">
-                    🐱
-                </div>
-
-            
-        </section>
-
-    </main>
-
-    <footer>
-
-        <div class="footer-name">
-            Supapit Chinnawut ♡
-        </div>
-
-        <p>
-            Made with love, dreams &amp; lots of sakura 🌸⭐🐱
-        </p>
-
-        <p style="margin-top:8px;">
-            © 2026 Supapit Chinnawut — My Portfolio
-        </p>
-
-    </footer>
-
-    <!-- ปุ่มกลับหน้าแรก -->
-
-    <a href="index.html" class="top-button" aria-label="กลับหน้าแรก">
-    ↑
-</a>
-    <script>
-
-        const cards = document.querySelectorAll(
-            ".portfolio-card, .certificate-card, .education-card, .about-item"
-        );
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.style.animation =
-                            "fadeUp .7s ease forwards";
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.1
-            }
-        );
-
-        cards.forEach((card) => {
-
-            card.style.opacity = "0";
-
-            observer.observe(card);
-
-        });
-
-    </script>
+    <section class="menu">
+
+        <a href="about.html" class="menu-card">
+            <div class="icon">👤</div>
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>ประวัติ ความสนใจ และเป้าหมายในอนาคต</p>
+        </a>
+
+        <a href="activities.html" class="menu-card">
+            <div class="icon">🧪</div>
+            <h2>กิจกรรมและประสบการณ์</h2>
+            <p>กิจกรรมการทดลองและประสบการณ์ด้านวิทยาศาสตร์</p>
+        </a>
+
+        <a href="certificates.html" class="menu-card">
+            <div class="icon">🏆</div>
+            <h2>เกียรติบัตร</h2>
+            <p>ผลงานและกิจกรรมที่ได้รับเกียรติบัตร</p>
+        </a>
+
+        <a href="contact.html" class="menu-card">
+            <div class="icon">💌</div>
+            <h2>ช่องทางการติดต่อ</h2>
+            <p>ช่องทางสำหรับติดต่อและติดตาม</p>
+        </a>
+
+    </section>
+
+    <a href="index.html" class="back">← กลับหน้าแรก</a>
+
+</div>
 
 </body>
 </html>
