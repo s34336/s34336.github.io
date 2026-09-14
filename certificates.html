@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เกียรติบัตร | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff0f8, #f2e8ff, #eaf5ff);
+            color: #51445d;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            font-family: 'Itim', cursive;
+            text-align: center;
+            font-size: 44px;
+            color: #925caf;
+            margin: 25px 0 35px;
+        }
+
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .certificate {
+            background: rgba(255,255,255,0.94);
+            border-radius: 27px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(150,110,175,0.15);
+        }
+
+        .certificate img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            background: #faf6fc;
+            border-radius: 18px;
+        }
+
+        .certificate h2 {
+            color: #80559a;
+            font-size: 21px;
+            margin-top: 15px;
+        }
+
+        .certificate p {
+            color: #6e6474;
+            line-height: 1.7;
+            margin-top: 7px;
+            font-size: 14px;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 10px 25px;
+            background: white;
+            color: #925caf;
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: 0 6px 20px rgba(150,110,175,0.12);
+        }
+
+        @media (max-width: 700px) {
+            .certificates {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>เกียรติบัตร 🏆</h1>
+
+    <section class="certificates">
+
+        <article class="certificate">
+            <img src="IMG_5654.jpeg" alt="เกียรติบัตรเปิดโลกเคมี">
+
+            <h2>เปิดโลกเคมี 🧪</h2>
+
+            <p>
+                เข้าร่วมการเรียนรู้และทดสอบความรู้ด้านเคมี
+                ผ่านกิจกรรมออนไลน์ของจุฬาลงกรณ์มหาวิทยาลัย
+                เพื่อพัฒนาความรู้และความเข้าใจด้านเคมี
+            </p>
+        </article>
+
+        <article class="certificate">
+            <img src="IMG_5758.jpeg" alt="เกียรติบัตร Sudoku">
+
+            <h2>SUDOKU 🧩</h2>
+
+            <p>
+                เข้าร่วมกิจกรรมการแข่งขัน Sudoku
+                ฝึกการคิดวิเคราะห์ การแก้ปัญหา
+                และการใช้เหตุผลอย่างเป็นระบบ
+            </p>
+        </article>
+
+        <article class="certificate">
+            <img src="IMG_5761.jpeg" alt="เกียรติบัตรกิจกรรมพี่สอนน้อง">
+
+            <h2>ค่ายพี่สอนน้อง 👩‍🔬</h2>
+
+            <p>
+                เข้าร่วมกิจกรรมพี่สอนน้อง
+                โดยได้ถ่ายทอดการทดลองวิทยาศาสตร์ง่าย ๆ
+                ให้กับนักเรียน เพื่อฝึกการสื่อสารและการทำงานร่วมกับผู้อื่น
+            </p>
+        </article>
+
+    </section>
+
+    <a href="portfolio.html" class="back">← กลับหน้า Portfolio</a>
+
+</div>
+
+</body>
+</html>
