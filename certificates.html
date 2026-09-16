@@ -1,40 +1,15 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>เกียรติบัตร | Portfolio</title>
+    <title>Certificates | Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Kanit', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #fff0f8, #f2e8ff, #eaf5ff);
-            color: #51445d;
-            padding: 30px 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h1 {
-            font-family: 'Itim', cursive;
-            text-align: center;
-            font-size: 44px;
-            color: #925caf;
-            margin: 25px 0 35px;
-        }
 
         .certificates {
             display: grid;
@@ -44,105 +19,166 @@
 
         .certificate {
             background: rgba(255,255,255,0.94);
-            border-radius: 27px;
+            border-radius: 28px;
             padding: 18px;
-            box-shadow: 0 10px 30px rgba(150,110,175,0.15);
+            border: 2px solid #ffe1e7;
+            box-shadow: 0 10px 28px rgba(188,130,150,0.12);
+            transition: 0.3s;
+        }
+
+        .certificate:hover {
+            transform: translateY(-6px) rotate(0.5deg);
+            box-shadow: 0 17px 35px rgba(188,130,150,0.2);
         }
 
         .certificate img {
             width: 100%;
-            height: 280px;
+            height: 290px;
             object-fit: contain;
-            background: #faf6fc;
+            background: #fffaf6;
             border-radius: 18px;
         }
 
         .certificate h2 {
-            color: #80559a;
-            font-size: 21px;
+            color: #c97896;
+            font-size: 22px;
             margin-top: 15px;
         }
 
         .certificate p {
-            color: #6e6474;
-            line-height: 1.7;
             margin-top: 7px;
+            line-height: 1.7;
+            color: #76676d;
             font-size: 14px;
         }
 
-        .back {
-            display: block;
-            width: fit-content;
-            margin: 30px auto;
-            padding: 10px 25px;
-            background: white;
-            color: #925caf;
-            text-decoration: none;
-            border-radius: 25px;
-            box-shadow: 0 6px 20px rgba(150,110,175,0.12);
+        .certificate-wide {
+            grid-column: span 2;
+        }
+
+        .two-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .two-images img {
+            height: 280px;
         }
 
         @media (max-width: 700px) {
+
             .certificates {
                 grid-template-columns: 1fr;
             }
 
-            h1 {
-                font-size: 38px;
+            .certificate-wide {
+                grid-column: span 1;
             }
+
+            .two-images {
+                grid-template-columns: 1fr;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="decor one">♡</div>
+    <div class="decor two">✦</div>
+    <div class="decor three">🌸</div>
+    <div class="decor four">🏆</div>
 
-    <h1>เกียรติบัตร 🏆</h1>
+    <div class="container">
 
-    <section class="certificates">
+        <header class="page-header">
+            <h1>เกียรติบัตร 🏆</h1>
+            <p>ผลงานและกิจกรรมที่ได้รับเกียรติบัตร</p>
+        </header>
 
-        <article class="certificate">
-            <img src="IMG_5654.jpeg" alt="เกียรติบัตรเปิดโลกเคมี">
+        <section class="certificates">
 
-            <h2>เปิดโลกเคมี 🧪</h2>
+            <article class="certificate">
 
-            <p>
-                เข้าร่วมการเรียนรู้และทดสอบความรู้ด้านเคมี
-                ผ่านกิจกรรมออนไลน์ของจุฬาลงกรณ์มหาวิทยาลัย
-                เพื่อพัฒนาความรู้และความเข้าใจด้านเคมี
-            </p>
-        </article>
+                <img
+                    src="IMG_5654.jpeg"
+                    alt="เกียรติบัตรเปิดโลกเคมี"
+                >
 
-        <article class="certificate">
-            <img src="IMG_5758.jpeg" alt="เกียรติบัตร Sudoku">
+                <h2>เปิดโลกเคมี 🧪</h2>
 
-            <h2>SUDOKU 🧩</h2>
+                <p>
+                    เข้าร่วมการเรียนรู้และทดสอบความรู้ด้านเคมี
+                    ผ่านกิจกรรมออนไลน์ของจุฬาลงกรณ์มหาวิทยาลัย
+                    เพื่อพัฒนาความรู้และความเข้าใจด้านเคมี
+                </p>
 
-            <p>
-                เข้าร่วมกิจกรรมการแข่งขัน Sudoku
-                ฝึกการคิดวิเคราะห์ การแก้ปัญหา
-                และการใช้เหตุผลอย่างเป็นระบบ
-            </p>
-        </article>
+            </article>
 
-        <article class="certificate">
-            <img src="IMG_5761.jpeg" alt="เกียรติบัตรกิจกรรมพี่สอนน้อง">
+            <article class="certificate">
 
-            <h2>ค่ายพี่สอนน้อง 👩‍🔬</h2>
+                <img
+                    src="IMG_5758.jpeg"
+                    alt="เกียรติบัตร Sudoku"
+                >
 
-            <p>
-                เข้าร่วมกิจกรรมพี่สอนน้อง
-                โดยได้ถ่ายทอดการทดลองวิทยาศาสตร์ง่าย ๆ
-                ให้กับนักเรียน เพื่อฝึกการสื่อสารและการทำงานร่วมกับผู้อื่น
-            </p>
-        </article>
+                <h2>SUDOKU 🧩</h2>
 
-    </section>
+                <p>
+                    เข้าร่วมกิจกรรม Sudoku
+                    ฝึกการคิดวิเคราะห์ การแก้ปัญหา
+                    และการใช้เหตุผลอย่างเป็นระบบ
+                </p>
 
-    <a href="portfolio.html" class="back">← กลับหน้า Portfolio</a>
+            </article>
 
-</div>
+            <article class="certificate certificate-wide">
+
+                <div class="two-images">
+
+                    <img
+                        src="IMG_5761.jpeg"
+                        alt="กิจกรรมพี่สอนน้อง ภาพที่ 1"
+                    >
+
+                    <img
+                        src="IMG_8869.jpeg"
+                        alt="กิจกรรมพี่สอนน้อง ภาพที่ 2"
+                    >
+
+                </div>
+
+                <h2>ค่ายพี่สอนน้อง 👩‍🔬</h2>
+
+                <p>
+                    เข้าร่วมกิจกรรมพี่สอนน้อง
+                    โดยได้ถ่ายทอดการทดลองวิทยาศาสตร์ง่าย ๆ
+                    ให้กับนักเรียน ฝึกการสื่อสาร
+                    การถ่ายทอดความรู้ และการทำงานร่วมกับผู้อื่น
+                </p>
+
+            </article>
+
+        </section>
+
+        <div style="text-align:center;">
+
+            <a href="portfolio.html" class="back-button">
+                ← กลับหน้า Portfolio
+            </a>
+
+            <br>
+
+            <a href="index.html" class="home-button">
+                🏠 หน้าแรก
+            </a>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
