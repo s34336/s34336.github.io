@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ประวัติการศึกษา | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .education-list {
+            display: grid;
+            gap: 22px;
+        }
+
+        .education-card {
+            background: rgba(255,255,255,0.94);
+            border-radius: 28px;
+            padding: 25px;
+            border: 2px solid #ffe1e7;
+            box-shadow: 0 10px 28px rgba(188,130,150,0.12);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card::before {
+            content: "✦";
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: #efb0c3;
+            font-size: 25px;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+
+            0%, 100% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(188,130,150,0.2);
+        }
+
+        .level {
+            display: inline-block;
+            background: #fff0d9;
+            color: #c68161;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .education-card h2 {
+            color: #c97896;
+            font-size: 23px;
+            margin-bottom: 7px;
+        }
+
+        .education-card p {
+            line-height: 1.8;
+            color: #75666c;
+        }
+
+        .goal {
+            margin-top: 28px;
+            background: linear-gradient(135deg, #fff0f3, #fff7e6);
+            border-radius: 28px;
+            padding: 28px;
+            border: 2px solid #ffe1e7;
+            box-shadow: 0 10px 28px rgba(188,130,150,0.12);
+        }
+
+        .goal h2 {
+            color: #c97896;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+
+        .goal p {
+            line-height: 1.9;
+        }
+
+        .highlight {
+            color: #bd6688;
+            font-weight: 600;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="decor one">♡</div>
+    <div class="decor two">✦</div>
+    <div class="decor three">🌸</div>
+    <div class="decor four">🎓</div>
+
+    <div class="container">
+
+        <header class="page-header">
+
+            <h1>ประวัติการศึกษา 🎓</h1>
+
+            <p>
+                เส้นทางการเรียนรู้และเป้าหมายทางการศึกษา
+            </p>
+
+        </header>
+
+
+        <section class="education-list">
+
+
+            <!-- ประถมศึกษา -->
+
+            <article class="education-card">
+
+                <span class="level">
+                    ระดับประถมศึกษา
+                </span>
+
+                <h2>
+                    🏫 โรงเรียนบุญประทีปวิทยาคาร
+                </h2>
+
+                <p>
+                    ศึกษาระดับประถมศึกษา
+                    และเริ่มต้นการเรียนรู้พื้นฐานในด้านต่าง ๆ
+                </p>
+
+            </article>
+
+
+            <!-- มัธยมต้น -->
+
+            <article class="education-card">
+
+                <span class="level">
+                    ระดับมัธยมศึกษาตอนต้น
+                </span>
+
+                <h2>
+                    🏫 โรงเรียนบ้านบึง“อุตสาหกรรมนุเคราะห์”
+                </h2>
+
+                <p>
+                    แผนการเรียน <strong>MSEP</strong>
+                </p>
+
+            </article>
+
+
+            <!-- มัธยมปลาย -->
+
+            <article class="education-card">
+
+                <span class="level">
+                    ระดับมัธยมศึกษาตอนปลาย
+                </span>
+
+                <h2>
+                    🏫 โรงเรียนบ้านบึง“อุตสาหกรรมนุเคราะห์”
+                </h2>
+
+                <p>
+                    แผนการเรียน <strong>MSEP</strong><br>
+                    กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- เป้าหมาย -->
+
+        <section class="goal">
+
+            <h2>
+                🎯 เป้าหมายการศึกษา
+            </h2>
+
+            <p>
+                มีเป้าหมายเข้าศึกษาต่อที่
+                <span class="highlight">
+                    มหาวิทยาลัยมหิดล คณะเทคนิคการแพทย์
+                </span>
+                เพราะมีความสนใจในการทำแลป
+                และต้องการนำความรู้ด้านชีววิทยาและเคมี
+                ไปต่อยอดในสายวิทยาศาสตร์สุขภาพ
+                รวมถึงอยากมีส่วนร่วมในการตรวจวิเคราะห์
+                และช่วยสนับสนุนการวินิจฉัยอาการของผู้ป่วย
+            </p>
+
+        </section>
+
+
+        <div style="text-align:center;">
+
+            <a href="portfolio.html" class="back-button">
+                ← กลับหน้า Portfolio
+            </a>
+
+            <br>
+
+            <a href="index.html" class="home-button">
+                🏠 หน้าแรก
+            </a>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
