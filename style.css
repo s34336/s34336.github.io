@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    color: #63545b;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 210, 225, 0.45), transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(255, 230, 190, 0.4), transparent 25%),
+        linear-gradient(135deg, #fff8f2, #fff0f5, #fff9ef);
+    overflow-x: hidden;
+}
+
+/* ---------- Floating Decorations ---------- */
+
+.decor {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.7;
+}
+
+.decor.one {
+    top: 12%;
+    left: 5%;
+    font-size: 25px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.decor.two {
+    top: 25%;
+    right: 6%;
+    font-size: 30px;
+    animation: float 5s ease-in-out infinite reverse;
+}
+
+.decor.three {
+    bottom: 18%;
+    left: 8%;
+    font-size: 22px;
+    animation: float 4.5s ease-in-out infinite;
+}
+
+.decor.four {
+    bottom: 10%;
+    right: 10%;
+    font-size: 28px;
+    animation: float 5.5s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+
+/* ---------- Main Container ---------- */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    padding: 30px 20px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- Header ---------- */
+
+.page-header {
+    text-align: center;
+    margin: 25px 0 40px;
+}
+
+.page-header h1 {
+    font-family: 'Itim', cursive;
+    font-size: 50px;
+    color: #d47f9e;
+    text-shadow: 2px 3px 0 #fff;
+}
+
+.page-header p {
+    margin-top: 8px;
+    color: #8f7b82;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 218, 226, 0.8);
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(186, 130, 145, 0.14);
+    padding: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.card:hover {
+    box-shadow: 0 18px 45px rgba(186, 130, 145, 0.2);
+}
+
+/* ---------- Buttons ---------- */
+
+.back-button,
+.home-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #e69ab4, #d582a2);
+    padding: 11px 25px;
+    border-radius: 30px;
+    margin-top: 30px;
+    box-shadow: 0 7px 18px rgba(213, 130, 162, 0.25);
+    transition: 0.25s;
+}
+
+.back-button:hover,
+.home-button:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 11px 25px rgba(213, 130, 162, 0.35);
+}
+
+/* ---------- Section Title ---------- */
+
+.section-title {
+    font-family: 'Itim', cursive;
+    color: #cf7898;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* ---------- Image ---------- */
+
+.portfolio-img {
+    width: 100%;
+    border-radius: 22px;
+    object-fit: cover;
+    border: 5px solid #fff4f0;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 20px 15px 50px;
+    }
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
