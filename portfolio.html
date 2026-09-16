@@ -1,156 +1,33 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Supapit Chinnawut</title>
+<section class="menu">
 
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <a href="about.html" class="menu-card">
+        <span class="menu-icon">👤</span>
+        <h2>About Me</h2>
+        <p>ข้อมูลส่วนตัวและความสนใจ</p>
+    </a>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <a href="education.html" class="menu-card">
+        <span class="menu-icon">🎓</span>
+        <h2>ประวัติการศึกษา</h2>
+        <p>ประวัติการศึกษาและเป้าหมายในอนาคต</p>
+    </a>
 
-        body {
-            font-family: 'Kanit', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #fff0f8, #f2e8ff, #eaf5ff);
-            color: #51445d;
-            padding: 30px 20px;
-        }
+    <a href="activities.html" class="menu-card">
+        <span class="menu-icon">🧪</span>
+        <h2>กิจกรรมและประสบการณ์</h2>
+        <p>กิจกรรมการทดลองและประสบการณ์ต่าง ๆ</p>
+    </a>
 
-        .container {
-            width: 100%;
-            max-width: 900px;
-            margin: auto;
-        }
+    <a href="certificates.html" class="menu-card">
+        <span class="menu-icon">🏆</span>
+        <h2>เกียรติบัตร</h2>
+        <p>ผลงานและกิจกรรมที่ได้รับเกียรติบัตร</p>
+    </a>
 
-        .header {
-            text-align: center;
-            margin: 25px 0 40px;
-        }
+    <a href="contact.html" class="menu-card">
+        <span class="menu-icon">💌</span>
+        <h2>ช่องทางการติดต่อ</h2>
+        <p>ช่องทางสำหรับติดต่อและติดตาม</p>
+    </a>
 
-        .header h1 {
-            font-family: 'Itim', cursive;
-            font-size: 48px;
-            color: #925caf;
-        }
-
-        .header p {
-            color: #817487;
-            margin-top: 8px;
-        }
-
-        .menu {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
-        }
-
-        .menu-card {
-            text-decoration: none;
-            color: inherit;
-            background: rgba(255, 255, 255, 0.92);
-            border-radius: 28px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(150, 110, 175, 0.14);
-            border: 2px solid rgba(255,255,255,0.9);
-            transition: 0.25s;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 35px rgba(150, 110, 175, 0.23);
-        }
-
-        .icon {
-            font-size: 48px;
-            margin-bottom: 12px;
-        }
-
-        .menu-card h2 {
-            color: #80559a;
-            font-size: 24px;
-            margin-bottom: 7px;
-        }
-
-        .menu-card p {
-            color: #837788;
-            font-size: 14px;
-        }
-
-        .back {
-            display: block;
-            width: fit-content;
-            margin: 35px auto 0;
-            padding: 10px 25px;
-            border-radius: 25px;
-            background: white;
-            color: #925caf;
-            text-decoration: none;
-            box-shadow: 0 6px 20px rgba(150,110,175,0.12);
-        }
-
-        .back:hover {
-            background: #f7eafa;
-        }
-
-        @media (max-width: 650px) {
-            .menu {
-                grid-template-columns: 1fr;
-            }
-
-            .header h1 {
-                font-size: 40px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <header class="header">
-        <h1>My Portfolio ♡</h1>
-        <p>เลือกหัวข้อที่ต้องการดูได้เลย ✦</p>
-    </header>
-
-    <section class="menu">
-
-        <a href="about.html" class="menu-card">
-            <div class="icon">👤</div>
-            <h2>เกี่ยวกับฉัน</h2>
-            <p>ประวัติ ความสนใจ และเป้าหมายในอนาคต</p>
-        </a>
-
-        <a href="activities.html" class="menu-card">
-            <div class="icon">🧪</div>
-            <h2>กิจกรรมและประสบการณ์</h2>
-            <p>กิจกรรมการทดลองและประสบการณ์ด้านวิทยาศาสตร์</p>
-        </a>
-
-        <a href="certificates.html" class="menu-card">
-            <div class="icon">🏆</div>
-            <h2>เกียรติบัตร</h2>
-            <p>ผลงานและกิจกรรมที่ได้รับเกียรติบัตร</p>
-        </a>
-
-        <a href="contact.html" class="menu-card">
-            <div class="icon">💌</div>
-            <h2>ช่องทางการติดต่อ</h2>
-            <p>ช่องทางสำหรับติดต่อและติดตาม</p>
-        </a>
-
-    </section>
-
-    <a href="index.html" class="back">← กลับหน้าแรก</a>
-
-</div>
-
-</body>
-</html>
+</section>
