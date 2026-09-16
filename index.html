@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supapit Chinnawut | My Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Supapit Chinnawut | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
         body {
-            font-family: 'Kanit', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #fff0f8, #f3e8ff, #eaf5ff);
-            color: #51445d;
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 25px;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: "✦";
-            position: fixed;
-            top: 8%;
-            left: 10%;
-            font-size: 35px;
-            color: #d9a7e8;
-            opacity: 0.7;
-        }
-
-        body::after {
-            content: "♡";
-            position: fixed;
-            bottom: 10%;
-            right: 10%;
-            font-size: 55px;
-            color: #e7a9cf;
-            opacity: 0.7;
+            justify-content: center;
+            min-height: 100vh;
         }
 
         .home-card {
-            width: 100%;
-            max-width: 650px;
-            background: rgba(255, 255, 255, 0.92);
-            border-radius: 35px;
+            width: min(650px, 92%);
+            background: rgba(255,255,255,0.94);
+            border-radius: 38px;
             padding: 45px 30px;
             text-align: center;
-            box-shadow: 0 15px 45px rgba(151, 111, 173, 0.18);
-            border: 2px solid rgba(255, 255, 255, 0.9);
+            border: 3px solid #ffe0e7;
+            box-shadow: 0 20px 55px rgba(188,130,150,0.18);
+            animation: appear 0.9s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .welcome {
             font-family: 'Itim', cursive;
-            color: #9b5fbd;
-            font-size: 42px;
+            color: #d47f9e;
+            font-size: 43px;
             margin-bottom: 25px;
         }
 
-        .profile-frame {
+        .profile-circle {
             width: 190px;
             height: 190px;
             margin: auto;
             padding: 7px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #f4a9d5, #bfa2e8);
-            box-shadow: 0 8px 25px rgba(178, 120, 193, 0.25);
+            background: linear-gradient(135deg, #f2a8bf, #f6d5a8);
+            animation: gentle 4s ease-in-out infinite;
         }
 
-        .profile-frame img {
+        @keyframes gentle {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .profile-circle img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -83,98 +77,93 @@
         }
 
         .name {
-            font-size: 27px;
-            font-weight: 600;
-            color: #76518c;
             margin-top: 25px;
+            color: #765d65;
+            font-size: 27px;
+            font-weight: 500;
         }
 
-        .info {
-            font-size: 17px;
+        .school-info {
+            margin-top: 10px;
             line-height: 2;
-            margin-top: 8px;
-            color: #6e6474;
+            color: #776970;
         }
 
-        .tag {
+        .msep {
             display: inline-block;
-            margin-top: 15px;
-            padding: 7px 20px;
-            background: #f4e3fb;
-            color: #925bab;
+            margin-top: 14px;
+            padding: 7px 22px;
             border-radius: 30px;
-            font-size: 15px;
+            background: #fff0d9;
+            color: #c68161;
         }
 
-        .enter-button {
+        .enter {
             display: inline-block;
             margin-top: 28px;
-            padding: 13px 35px;
-            border-radius: 30px;
-            background: linear-gradient(135deg, #d889c2, #9e7bd1);
+            padding: 14px 38px;
+            border-radius: 35px;
+            background: linear-gradient(135deg, #e79ab5, #d985a5);
             color: white;
             text-decoration: none;
             font-size: 18px;
-            font-weight: 500;
-            box-shadow: 0 8px 20px rgba(163, 115, 188, 0.25);
+            box-shadow: 0 8px 20px rgba(210,130,157,0.3);
             transition: 0.25s;
         }
 
-        .enter-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(163, 115, 188, 0.35);
+        .enter:hover {
+            transform: translateY(-5px) scale(1.03);
         }
 
-        .small-text {
-            margin-top: 22px;
-            font-size: 13px;
-            color: #9b8da3;
+        .mini {
+            margin-top: 23px;
+            color: #aa969d;
+            font-family: 'Itim', cursive;
+            font-size: 18px;
         }
 
-        @media (max-width: 600px) {
-            .welcome {
-                font-size: 34px;
-            }
-
-            .name {
-                font-size: 23px;
-            }
-
-            .profile-frame {
-                width: 165px;
-                height: 165px;
-            }
-        }
     </style>
 </head>
 
 <body>
 
+    <div class="decor one">♡</div>
+    <div class="decor two">✦</div>
+    <div class="decor three">🌸</div>
+    <div class="decor four">♡</div>
+
     <main class="home-card">
 
-        <h1 class="welcome">Welcome to My Portfolio ♡</h1>
+        <h1 class="welcome">
+            Welcome to My Portfolio ♡
+        </h1>
 
-        <div class="profile-frame">
+        <div class="profile-circle">
             <img src="IMG_4594.jpeg" alt="รูปโปรไฟล์">
         </div>
 
-        <h2 class="name">น.ส.สุภาพิชญ์ ชินวุฒิ</h2>
+        <h2 class="name">
+            น.ส.สุภาพิชญ์ ชินวุฒิ
+        </h2>
 
-        <p class="info">
+        <p class="school-info">
             กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6<br>
-            แผนการเรียน MSEP
+            แผนการเรียน MSEP<br>
+            โรงเรียนบ้านบึง“อุตสาหกรรมนุเคราะห์”
         </p>
 
-        <span class="tag">M.6 | MSEP  ♡</span>
+        <span class="msep">
+            M.6 • MSEP ♡
+        </span>
 
         <br>
 
-        <a href="portfolio.html" class="enter-button">
-            เข้าสู่ Portfolio →
+        <a href="portfolio.html" class="enter">
+            เข้าสู่ Portfolio ✦
         </a>
 
-        <p class="small-text">
-            ✦ Thank you for visiting my portfolio ✦
+        <p class="mini">
+            ✿ Thank you for visiting my portfolio ✿
         </p>
 
     </main>
