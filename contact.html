@@ -1,139 +1,152 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ช่องทางการติดต่อ | Portfolio</title>
+    <title>Contact | Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
-        body {
-            font-family: 'Kanit', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #fff0f8, #f2e8ff, #eaf5ff);
-            color: #51445d;
-            padding: 30px 20px;
-        }
-
-        .container {
-            max-width: 700px;
+        .contact-list {
+            max-width: 650px;
             margin: auto;
         }
 
-        .card {
-            background: rgba(255,255,255,0.94);
-            border-radius: 30px;
-            padding: 40px 30px;
-            box-shadow: 0 12px 35px rgba(150,110,175,0.16);
-            margin-top: 25px;
-        }
-
-        h1 {
-            font-family: 'Itim', cursive;
-            text-align: center;
-            font-size: 44px;
-            color: #925caf;
-            margin-bottom: 35px;
-        }
-
-        .contact {
+        .contact-item {
             display: flex;
             align-items: center;
-            gap: 18px;
-            background: #fcf3ff;
-            border-radius: 20px;
-            padding: 18px 20px;
-            margin-bottom: 15px;
+            gap: 20px;
+            padding: 20px;
+            margin-bottom: 16px;
+            background: #fffaf5;
+            border: 2px solid #ffe1e7;
+            border-radius: 22px;
+            transition: 0.25s;
         }
 
-        .icon {
-            font-size: 30px;
-            width: 45px;
-            text-align: center;
+        .contact-item:hover {
+            transform: translateX(7px);
+            background: #fff4f1;
         }
 
-        .contact h2 {
-            font-size: 17px;
-            color: #80559a;
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #ffe8ed;
+            font-size: 27px;
+            flex-shrink: 0;
         }
 
-        .contact p {
-            font-size: 15px;
-            color: #6e6474;
+        .contact-item h2 {
+            color: #c97896;
+            font-size: 18px;
+        }
+
+        .contact-item p {
+            color: #75666c;
+            margin-top: 2px;
             word-break: break-word;
         }
 
         .thanks {
             text-align: center;
             margin-top: 35px;
-            color: #9a819f;
             font-family: 'Itim', cursive;
-            font-size: 25px;
+            color: #c97896;
+            font-size: 27px;
         }
 
-        .back {
-            display: block;
-            width: fit-content;
-            margin: 30px auto;
-            padding: 10px 25px;
-            background: white;
-            color: #925caf;
-            text-decoration: none;
-            border-radius: 25px;
-            box-shadow: 0 6px 20px rgba(150,110,175,0.12);
-        }
     </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="decor one">♡</div>
+    <div class="decor two">✦</div>
+    <div class="decor three">🌸</div>
+    <div class="decor four">💌</div>
 
-    <div class="card">
+    <div class="container">
 
-        <h1>ช่องทางการติดต่อ 💌</h1>
+        <header class="page-header">
+            <h1>ช่องทางการติดต่อ 💌</h1>
+            <p>สามารถติดต่อได้ผ่านช่องทางเหล่านี้</p>
+        </header>
 
-        <div class="contact">
-            <div class="icon">📷</div>
-            <div>
-                <h2>Instagram</h2>
-                <p>s.nvqr0</p>
+        <section class="card">
+
+            <div class="contact-list">
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📷
+                    </div>
+
+                    <div>
+                        <h2>Instagram</h2>
+                        <p>s.nvqr0</p>
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        💬
+                    </div>
+
+                    <div>
+                        <h2>Line</h2>
+                        <p>0935860822</p>
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉️
+                    </div>
+
+                    <div>
+                        <h2>Gmail</h2>
+                        <p>supapitchinnawut09@gmail.com</p>
+                    </div>
+
+                </div>
+
             </div>
-        </div>
 
-        <div class="contact">
-            <div class="icon">💬</div>
-            <div>
-                <h2>Line</h2>
-                <p>0935860822</p>
-            </div>
-        </div>
+            <p class="thanks">
+                Thank you for visiting my Portfolio ♡
+            </p>
 
-        <div class="contact">
-            <div class="icon">✉️</div>
-            <div>
-                <h2>Gmail</h2>
-                <p>supapitchinnawut09@gmail.com</p>
-            </div>
-        </div>
+        </section>
 
-        <p class="thanks">
-            Thank you for visiting my Portfolio ♡
-        </p>
+        <div style="text-align:center;">
+
+            <a href="portfolio.html" class="back-button">
+                ← กลับหน้า Portfolio
+            </a>
+
+            <br>
+
+            <a href="index.html" class="home-button">
+                🏠 หน้าแรก
+            </a>
+
+        </div>
 
     </div>
-
-    <a href="portfolio.html" class="back">← กลับหน้า Portfolio</a>
-
-</div>
 
 </body>
 </html>
